@@ -1674,51 +1674,51 @@ a.usecase:focus-visible {
 
 
 /* =============================================================
-   THEME-V2 — Royal-blue / amber palette inspired by
-   AgencyAnalytics' clean SaaS visual language. Activated by
-   adding `class="theme-v2"` to <body>.
+   THEME-V2 — Black / white / neutral grays with restrained blue
+   for CTAs and a lime highlight pill, inspired by
+   AgencyAnalytics' clean SaaS visual language.
    ============================================================= */
 
 .theme-v2 {
-  /* Primary — vibrant royal blue */
+  /* Primary — vibrant blue, used SPARINGLY (CTAs + links only) */
   --color-primary: #2563EB;
   --color-on-primary: #FFFFFF;
-  --color-primary-container: #DBEAFE;
+  --color-primary-container: #EFF4FF;
   --color-on-primary-container: #1E3A8A;
 
-  /* Accent — amber highlight (used for hero word-mark) */
-  --color-accent: #FACC15;
-  --color-on-accent: #0B1727;
+  /* Accent — lime-yellow highlight pill behind hero word-mark */
+  --color-accent: #D9F99D;
+  --color-on-accent: #0F1117;
 
-  /* Secondary — softer blue tones */
-  --color-secondary: #1E40AF;
+  /* Secondary — neutral grays, NOT blue */
+  --color-secondary: #4B5563;
   --color-on-secondary: #FFFFFF;
-  --color-secondary-container: #E0EAFF;
-  --color-tertiary: #3B82F6;
+  --color-secondary-container: #F3F4F6;
+  --color-tertiary: #6B7280;
 
-  /* Surfaces — pure white with a faint blue-tinted band */
+  /* Surfaces — pure white with neutral gray section band */
   --color-background: #FFFFFF;
-  --color-on-background: #0B1727;
+  --color-on-background: #0F1117;
   --color-surface: #FFFFFF;
-  --color-on-surface: #0B1727;
-  --color-surface-secondary: #F4F8FF;   /* section band */
-  --color-surface-tertiary: #E7EEFB;
+  --color-on-surface: #0F1117;
+  --color-surface-secondary: #F8F8F8;   /* neutral section band */
+  --color-surface-tertiary: #EEEEEF;
   --color-surface-elevated: #FFFFFF;
-  --color-on-surface-secondary: #475569;
+  --color-on-surface-secondary: #5A6271;
 
-  /* Outlines / separators */
-  --color-outline: #94A3B8;
-  --color-outline-variant: #DBEAFE;
-  --color-separator: rgba(11, 23, 39, 0.08);
+  /* Outlines / separators — neutral hairlines */
+  --color-outline: #9CA3AF;
+  --color-outline-variant: #E5E7EB;
+  --color-separator: rgba(15, 17, 23, 0.08);
 
   /* Labels */
-  --color-label: #0B1727;
-  --color-label-secondary: rgba(11, 23, 39, 0.62);
-  --color-label-tertiary: rgba(11, 23, 39, 0.42);
+  --color-label: #0F1117;
+  --color-label-secondary: rgba(15, 17, 23, 0.62);
+  --color-label-tertiary: rgba(15, 17, 23, 0.45);
 
   /* Glassy nav over white */
-  --nav-bg-glass: rgba(255, 255, 255, 0.85);
-  --nav-border: rgba(11, 23, 39, 0.06);
+  --nav-bg-glass: rgba(255, 255, 255, 0.86);
+  --nav-border: rgba(15, 17, 23, 0.06);
 
   /* Focus ring — match new primary */
   --focus-ring: 3px solid rgba(37, 99, 235, 0.45);
@@ -1729,7 +1729,7 @@ a.usecase:focus-visible {
   --gradient-mid: #1E40AF;
 }
 
-/* Hero amber underline highlight (replaces the old fade) */
+/* Hero lime underline highlight (replaces the old fade) */
 .theme-v2 .display__fade {
   position: relative;
   color: var(--color-on-surface);
@@ -1738,27 +1738,22 @@ a.usecase:focus-visible {
 .theme-v2 .display__fade::before {
   content: "";
   position: absolute;
-  inset: auto -0.15em 0.05em -0.15em;
-  height: 0.42em;
+  inset: auto -0.18em 0.05em -0.18em;
+  height: 0.45em;
   background: var(--color-accent);
-  border-radius: 6px;
+  border-radius: 4px;
   z-index: -1;
 }
 
-/* Hero gets a subtle blue-tinted background gradient */
-.theme-v2 .hero {
-  background:
-    radial-gradient(ellipse at 80% -10%, rgba(37, 99, 235, 0.10), transparent 60%),
-    radial-gradient(ellipse at -10% 90%, rgba(250, 204, 21, 0.08), transparent 55%),
-    #FFFFFF;
-}
+/* Hero — clean white, no blue wash */
+.theme-v2 .hero { background: #FFFFFF; }
 .theme-v2 .hero__bg { display: none; }
 
-/* Eyebrow pill: blue text on light blue, agency-style */
+/* Eyebrow pill — neutral light gray with dark text */
 .theme-v2 .eyebrow,
 .theme-v2 .section__eyebrow {
-  background: var(--color-primary-container);
-  color: var(--color-secondary);
+  background: var(--color-surface-secondary);
+  color: var(--color-on-surface-secondary);
   padding: 6px 12px;
   border-radius: var(--radius-full);
   font-weight: 600;
@@ -1766,124 +1761,129 @@ a.usecase:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  border: 1px solid var(--color-outline-variant);
 }
 
-/* Buttons — solid blue, soft shadow lift */
+/* Buttons — solid blue (CTA only), soft shadow lift */
 .theme-v2 .button--primary {
   background: var(--color-primary);
   color: var(--color-on-primary);
   border: none;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.28);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.22);
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 .theme-v2 .button--primary:hover {
   background: #1D4ED8;
   transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.34);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.30);
 }
 .theme-v2 .button--primary:active {
   transform: translateY(0);
-  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.30);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.26);
 }
 .theme-v2 .button--ghost {
-  color: var(--color-primary);
+  color: var(--color-on-surface);
+  border: 1px solid var(--color-outline-variant);
+  background: var(--color-surface);
 }
 .theme-v2 .button--ghost:hover {
-  background: var(--color-primary-container);
+  background: var(--color-surface-secondary);
 }
 
-/* Section bands take on the soft blue tint */
+/* Section bands — neutral gray */
 .theme-v2 .section--band {
   background: var(--color-surface-secondary);
 }
 
-/* Feature cards — clean white with hairline border + soft shadow */
+/* Feature cards — clean white, hairline border, near-black icons */
 .theme-v2 .feature {
   background: var(--color-surface);
   border: 1px solid var(--color-outline-variant);
   border-radius: var(--radius-lg);
-  box-shadow: 0 1px 2px rgba(11, 23, 39, 0.04);
+  box-shadow: 0 1px 2px rgba(15, 17, 23, 0.04);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .theme-v2 .feature:hover {
   transform: translateY(-2px);
-  border-color: var(--color-primary-container);
-  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
+  border-color: var(--color-outline);
+  box-shadow: 0 10px 24px rgba(15, 17, 23, 0.08);
 }
 .theme-v2 .feature__icon {
-  background: var(--color-primary-container);
-  color: var(--color-primary);
+  background: var(--color-surface-secondary);
+  color: var(--color-on-surface);
   border-radius: var(--radius-md);
 }
 
-/* Hero feature badges — pill with brand blue on light */
+/* Feature badges — neutral by default, blue only for primary highlight */
 .theme-v2 .feature__badge {
-  background: var(--color-primary);
-  color: var(--color-on-primary);
+  background: var(--color-on-surface);
+  color: var(--color-surface);
 }
 .theme-v2 .feature__badge--alt {
   background: var(--color-accent);
   color: var(--color-on-accent);
 }
 
-/* Step numbers — small chip with brand blue */
+/* Step numbers — neutral dark, no blue */
 .theme-v2 .step__num {
-  color: var(--color-primary);
+  color: var(--color-on-surface);
   font-weight: 700;
 }
 .theme-v2 .step__icon-wrap {
-  background: var(--color-primary-container);
-  color: var(--color-primary);
+  background: var(--color-surface-secondary);
+  color: var(--color-on-surface);
   border-radius: var(--radius-md);
+  border: 1px solid var(--color-outline-variant);
 }
 
-/* Use-case cards — lift + blue-glow on hover */
-.theme-v2 a.usecase:hover {
-  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.14);
-}
+/* Use-case cards — neutral hover lift */
 .theme-v2 .usecase {
   background: var(--color-surface);
   border: 1px solid var(--color-outline-variant);
   border-radius: var(--radius-lg);
 }
+.theme-v2 a.usecase:hover {
+  border-color: var(--color-outline);
+  box-shadow: 0 12px 28px rgba(15, 17, 23, 0.10);
+}
 
-/* Compatibility chips — selected = filled blue */
+/* Compatibility chips — selected = neutral dark fill, not blue */
 .theme-v2 .chip {
   background: var(--color-surface);
   border: 1px solid var(--color-outline-variant);
   color: var(--color-on-surface);
 }
 .theme-v2 .chip--selected {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--color-on-primary);
+  background: var(--color-on-surface);
+  border-color: var(--color-on-surface);
+  color: var(--color-surface);
 }
-.theme-v2 .chip--selected svg { color: var(--color-on-primary); }
+.theme-v2 .chip--selected svg { color: var(--color-surface); }
 
-/* Hero checklist tick — blue */
-.theme-v2 .hero__checklist svg { color: var(--color-primary); }
-.theme-v2 .portal__bullets svg { color: var(--color-primary); }
+/* Hero / portal checklist ticks — neutral dark, not blue */
+.theme-v2 .hero__checklist svg { color: var(--color-on-surface); }
+.theme-v2 .portal__bullets svg { color: var(--color-on-surface); }
 
-/* FAQ chevron + open state */
+/* FAQ — clean neutral */
 .theme-v2 .faq-item {
   border: 1px solid var(--color-outline-variant);
   border-radius: var(--radius-md);
   background: var(--color-surface);
 }
 .theme-v2 .faq-item[open] {
-  border-color: var(--color-primary-container);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);
+  border-color: var(--color-outline);
+  box-shadow: 0 4px 14px rgba(15, 17, 23, 0.06);
 }
-.theme-v2 .faq-item__chev { color: var(--color-primary); }
+.theme-v2 .faq-item__chev { color: var(--color-on-surface-secondary); }
 
-/* Dashboard mockup — re-tint the blueprint chrome */
+/* Dashboard mockup — neutral chrome with one blue accent stat */
 .theme-v2 .dash {
   border: 1px solid var(--color-outline-variant);
-  box-shadow: 0 24px 60px rgba(37, 99, 235, 0.18);
+  box-shadow: 0 24px 60px rgba(15, 17, 23, 0.10);
 }
 .theme-v2 .dash__nav-item--active {
-  background: var(--color-primary-container);
-  color: var(--color-primary);
+  background: var(--color-surface-secondary);
+  color: var(--color-on-surface);
   font-weight: 600;
 }
 .theme-v2 .dash-stat--accent {
@@ -1902,13 +1902,14 @@ a.usecase:focus-visible {
   color: #B91C1C;
 }
 
-/* Trust pillars */
+/* Trust pillars — neutral icons */
 .theme-v2 .pillar__icon {
-  background: var(--color-primary-container);
-  color: var(--color-primary);
+  background: var(--color-surface-secondary);
+  color: var(--color-on-surface);
+  border: 1px solid var(--color-outline-variant);
 }
 
-/* Final CTA — full blue band */
+/* Final CTA — keep the blue band (it's the closing CTA, deserves it) */
 .theme-v2 .final-cta {
   background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
   color: #FFFFFF;
@@ -1925,9 +1926,9 @@ a.usecase:focus-visible {
   background: #F4F8FF;
 }
 
-/* Footer — deep navy */
+/* Footer — near-black, not navy */
 .theme-v2 .footer {
-  background: #0B1727;
+  background: #0F1117;
   color: rgba(255,255,255,0.7);
 }
 .theme-v2 .footer a { color: rgba(255,255,255,0.7); }
@@ -1936,10 +1937,10 @@ a.usecase:focus-visible {
 .theme-v2 .footer__tag { color: rgba(255,255,255,0.6); }
 .theme-v2 .footer__base { border-top-color: rgba(255,255,255,0.08); }
 
-/* Nav active link */
+/* Nav active link — subtle neutral */
 .theme-v2 .nav__link--active {
-  background: var(--color-primary-container);
-  color: var(--color-primary);
+  background: var(--color-surface-secondary);
+  color: var(--color-on-surface);
 }
 
 /* Form field focus ring blue */
