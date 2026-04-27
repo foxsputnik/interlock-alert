@@ -15,20 +15,29 @@ const {
     <h2 class="final-cta__h">{heading}</h2>
     <p class="final-cta__p">{body}</p>
     {useModal ? (
-      <button type="button" class="button button--primary button--xl" data-quote-open>
+      <button type="button" class="button button--primary button--xl final-cta__btn" data-quote-open>
         <span class="button__label">Get a Quote</span>
         <svg class="icon-20" aria-hidden="true"><use href="#i-arrow-right"/></svg>
       </button>
     ) : (
-      <a href="/contact" class="button button--primary button--xl">
+      <a href="/contact" class="button button--primary button--xl final-cta__btn">
         <span class="button__label">Get a Quote</span>
         <svg class="icon-20" aria-hidden="true"><use href="#i-arrow-right"/></svg>
       </a>
     )}
-    <div class="final-cta__foot">
-      <span>UK-wide installation</span><span aria-hidden="true">·</span>
-      <span>No activation fee</span><span aria-hidden="true">·</span>
-      <span>Cancel anytime</span>
-    </div>
+    <ul class="final-cta__bullets" role="list">
+      <li>
+        <svg class="icon-18" aria-hidden="true"><use href="#i-check"/></svg>
+        <span>Tailored quote within 1 working day</span>
+      </li>
+      <li>
+        <svg class="icon-18" aria-hidden="true"><use href="#i-check"/></svg>
+        <span>UK-wide professional installation</span>
+      </li>
+      <li>
+        <svg class="icon-18" aria-hidden="true"><use href="#i-check"/></svg>
+        <span>Transparent monthly pricing — no activation fees</span>
+      </li>
+    </ul>
   </div>
 </section>

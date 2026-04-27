@@ -1,0 +1,195 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+---
+<Layout
+  title="What is an alcohol interlock? — A plain-English guide | Interlock Alert"
+  description="A short, plain-English guide to what alcohol interlocks are, how they work, who fits them, what they cost, and why UK fleets and households choose Interlock Alert."
+>
+  <!-- HERO -->
+  <section class="hero hero--inner">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="wrap hero__grid hero__grid--narrow">
+      <div class="hero__copy reveal">
+        <span class="eyebrow">A plain-English guide</span>
+        <h1 class="display">
+          What is an alcohol interlock? <span class="display__fade">And why is anyone fitting one?</span>
+        </h1>
+        <p class="hero__sub">
+          A short, jargon-free guide to how alcohol interlocks work, who fits them, what they cost, and why UK fleets, tradespeople, businesses and families are choosing Interlock Alert.
+        </p>
+        <div class="hero__cta">
+          <button type="button" class="button button--primary button--lg" data-quote-open>
+            <span class="button__label">Get a Quote</span>
+            <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS IT -->
+  <section class="section section--band">
+    <div class="wrap wrap--narrow">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">The short answer</span>
+        <h2 class="section__heading">An alcohol interlock is a breath test, wired into the ignition.</h2>
+        <p class="section__lede">An alcohol interlock is a small in-cab device that requires the driver to provide a breath sample before the engine will start. If the sample is below a pre-set limit, the vehicle starts as normal. If it's above, the engine is immobilised until a clean sample is provided — and the failed event is recorded on the vehicle's permanent log.</p>
+        <p class="section__lede">In the UK, interlocks are fitted privately — by fleets, businesses, tradespeople and individuals who've decided that drink driving is a decision best taken off the road entirely.</p>
+      </header>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">How it works</span>
+        <h2 class="section__heading">Four seconds between the key turn and a confirmed pass.</h2>
+      </header>
+
+      <ol class="steps" role="list">
+        <li class="step reveal">
+          <div class="step__num">01</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-wind"/></svg></div>
+          <h3 class="step__title">Breath sample</h3>
+          <p class="step__body">The driver blows into the handheld unit. With Interlock Alert, a front-facing camera captures a photo at the moment of the sample to verify identity.</p>
+        </li>
+        <li class="step reveal reveal--delay-1">
+          <div class="step__num">02</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-activity"/></svg></div>
+          <h3 class="step__title">Result in seconds</h3>
+          <p class="step__body">A fuel-cell sensor measures blood alcohol against a vehicle-specific threshold and returns a pass/fail in under three seconds.</p>
+        </li>
+        <li class="step reveal reveal--delay-2">
+          <div class="step__num">03</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-key"/></svg></div>
+          <h3 class="step__title">Start or immobilise</h3>
+          <p class="step__body">A pass enables the ignition. A fail keeps the engine fully immobilised at the ECU level — there is no second attempt and no rolling start.</p>
+        </li>
+        <li class="step reveal reveal--delay-3">
+          <div class="step__num">04</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-file-log"/></svg></div>
+          <h3 class="step__title">Logged in real time</h3>
+          <p class="step__body">Every test — pass or fail — is stamped with GPS, driver photo and timestamp, then synced to the Interlock Alert portal over 4G.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- WHO FITS IT -->
+  <section class="section section--band">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">Who fits one</span>
+        <h2 class="section__heading">If the consequences of drink driving land on you, the answer is usually yes.</h2>
+        <p class="section__lede section__lede--compact">Interlocks aren't only for legal mandates. They're chosen by anyone who carries the cost when something goes wrong at the wheel.</p>
+      </header>
+
+      <div class="usecase-grid">
+        <a class="usecase usecase--photo reveal" href="/use-cases/fleet-operators">
+          <figure class="usecase__media">
+            <img src="/images/fleet-operators.jpg" alt="Fleet of HGV trucks on a UK motorway" class="usecase__media-img" loading="lazy" decoding="async" />
+          </figure>
+          <div class="usecase__content">
+            <h3 class="usecase__title">Fleet operators</h3>
+            <p class="usecase__body">O-licence holders, haulage and multi-drop operations who need a verified pass on record before the engine starts.</p>
+          </div>
+        </a>
+        <a class="usecase usecase--photo reveal reveal--delay-1" href="/use-cases/trades-and-construction">
+          <figure class="usecase__media">
+            <img src="/images/site-vehicles.png" alt="Construction site vehicles and vans on a UK building site" class="usecase__media-img" loading="lazy" decoding="async" />
+          </figure>
+          <div class="usecase__content">
+            <h3 class="usecase__title">Trades &amp; construction</h3>
+            <p class="usecase__body">Vans and site vehicles where one drink-drive incident can pull the contract, the insurance and the company name with it.</p>
+          </div>
+        </a>
+        <a class="usecase usecase--photo reveal reveal--delay-2" href="/use-cases/company-vehicles">
+          <figure class="usecase__media">
+            <img src="/images/car-fleet.jpg" alt="Row of company fleet cars parked outside a UK office building" class="usecase__media-img" loading="lazy" decoding="async" />
+          </figure>
+          <div class="usecase__content">
+            <h3 class="usecase__title">Company vehicles</h3>
+            <p class="usecase__body">Pool cars, grey fleet and assigned-driver vehicles where the brand on the bodywork is the company's liability.</p>
+          </div>
+        </a>
+        <a class="usecase usecase--photo reveal reveal--delay-3" href="/use-cases/individuals-and-families">
+          <figure class="usecase__media">
+            <img src="/images/personal-car.jpg" alt="Individual driver beside a personal car on a residential street" class="usecase__media-img" loading="lazy" decoding="async" />
+          </figure>
+          <div class="usecase__content">
+            <h3 class="usecase__title">Individuals &amp; families</h3>
+            <p class="usecase__body">Newly qualified drivers, those protecting a recovery, and households who want certainty on every key turn.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COST -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">What does it cost?</span>
+        <h2 class="section__heading">Transparent monthly pricing, no surprises.</h2>
+        <p class="section__lede">Interlock Alert is priced per device, per month — with everything included in a single line. There are no activation fees, no per-test charges, no early-exit penalties. The exact monthly figure depends on the vehicle type, the number of devices in your fleet and the level of camera and connectivity coverage you need.</p>
+        <p class="section__lede">For most single vehicles the monthly cost sits below the price of a fortnight's worth of fuel. For fleets, per-device pricing typically falls as the count rises. The fastest way to a number is a quick quote — usually back within one working day.</p>
+      </header>
+
+      <div class="hero__cta" style="margin-top: 8px;">
+        <button type="button" class="button button--primary button--lg" data-quote-open>
+          <span class="button__label">Get a tailored quote</span>
+          <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALLATION -->
+  <section class="section section--band">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">Installation</span>
+        <h2 class="section__heading">Fitted by certified engineers, in your region, usually within five working days.</h2>
+      </header>
+
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-wrench"/></svg></div>
+          <h3 class="feature__title">Dealer-grade auto-electricians</h3>
+          <p class="feature__body">Every install is carried out by a certified UK engineer working at the ECU level. Warranty-safe, MOT-safe, and discreet inside the cabin.</p>
+        </article>
+        <article class="feature reveal reveal--delay-1">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-bolt"/></svg></div>
+          <h3 class="feature__title">All drivetrains supported</h3>
+          <p class="feature__body">Petrol, diesel, hybrid and pure-electric vehicles, including modern keyless and CAN-bus platforms — including HGVs, LCVs and PSVs.</p>
+        </article>
+        <article class="feature reveal reveal--delay-2">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-gb"/></svg></div>
+          <h3 class="feature__title">UK-wide network</h3>
+          <p class="feature__body">Engineers in every region. Most installations take a single appointment and are scheduled within five working days of accepting your quote.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY INTERLOCK ALERT -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <header class="section__header section__header--center reveal">
+        <span class="section__eyebrow">Why Interlock Alert</span>
+        <h2 class="section__heading">The only UK interlock that's both camera-verified and cloud-connected.</h2>
+        <p class="section__lede">Most interlocks on the UK market test breath, then leave you guessing. Interlock Alert pairs an identity-verifying driver camera with always-on 4G connectivity — so every test is provable, every result is in your portal within seconds, and the audit trail is ready the moment you need it. UK-built, UK-supported, with transparent monthly pricing and no lock-in.</p>
+      </header>
+    </div>
+  </section>
+
+  <FinalCTA
+    useModal
+    heading="Still have questions? Quickest way to a real answer is to ask one."
+    body="Single vehicle or full fleet — share a few details and a UK-based engineer will come back with a tailored quote and an installation window, usually within one business day."
+  />
+  <QuoteModal />
+</Layout>

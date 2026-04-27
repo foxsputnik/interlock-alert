@@ -3,6 +3,18 @@ const { pathname } = Astro.url;
 const isActive = (path: string) =>
   path === '/' ? pathname === '/' : pathname.startsWith(path);
 ---
+<div class="nav-utility" role="complementary" aria-label="Utility">
+  <div class="wrap nav-utility__inner">
+    <a href="tel:08000000000" class="nav-utility__item nav-utility__phone">
+      <svg class="icon-14" aria-hidden="true"><use href="#i-phone"/></svg>
+      <span>0800 000 0000</span>
+    </a>
+    <a href="#" class="nav-utility__item nav-utility__portal" aria-label="Client Portal (coming soon)">
+      <svg class="icon-14" aria-hidden="true"><use href="#i-lock"/></svg>
+      <span>Client Portal</span>
+    </a>
+  </div>
+</div>
 <header class="nav" role="banner">
   <div class="nav__inner wrap">
     <a class="nav__brand" href="/" aria-label="Interlock Alert home">
@@ -11,10 +23,10 @@ const isActive = (path: string) =>
 
     <nav class="nav__links" aria-label="Primary">
       <a href="/#how-it-works" class="nav__link">How it works</a>
-      <a href="/#features" class="nav__link">Features</a>
+      <a href="/what-is-an-alcohol-interlock" class={`nav__link ${isActive('/what-is-an-alcohol-interlock') ? 'nav__link--active' : ''}`}>What is an interlock?</a>
       <a href="/#use-cases" class={`nav__link ${isActive('/use-cases') ? 'nav__link--active' : ''}`}>Use cases</a>
+      <a href="/faq" class={`nav__link ${isActive('/faq') ? 'nav__link--active' : ''}`}>FAQ</a>
       <a href="/about" class={`nav__link ${isActive('/about') ? 'nav__link--active' : ''}`}>About</a>
-      <a href="/#faq" class="nav__link">FAQ</a>
     </nav>
 
     <div class="nav__actions">

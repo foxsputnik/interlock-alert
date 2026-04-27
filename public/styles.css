@@ -1367,6 +1367,39 @@
     font-size: 13px;
     color: rgba(255, 255, 255, 0.7);
   }
+  .final-cta__btn {
+    margin-bottom: var(--space-xl);
+  }
+  .final-cta__bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 28px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .final-cta__bullets li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+  }
+  .final-cta__bullets svg {
+    color: rgba(255, 255, 255, 0.95);
+    flex: 0 0 auto;
+  }
+  @media (max-width: 700px) {
+    .final-cta__bullets {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      text-align: left;
+    }
+  }
 
   /* =============== FOOTER =============== */
   .footer {
@@ -1681,6 +1714,42 @@ a.usecase:focus-visible {
   margin: 0;
 }
 .contact-form__hp { display: none !important; }
+
+
+/* =============================================================
+   Top utility strip (above main nav)
+   ============================================================= */
+.nav-utility {
+  background: #0F1117;
+  color: rgba(255,255,255,0.78);
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-utility__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+  height: 36px;
+}
+.nav-utility__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+.nav-utility__item:hover { color: #FFFFFF; }
+.nav-utility__phone { font-weight: 600; }
+.nav-utility__portal svg { opacity: 0.7; }
+@media (max-width: 600px) {
+  .nav-utility__inner { justify-content: space-between; gap: 12px; }
+  .nav-utility__portal span { display: none; }
+}
+
+/* Theme-v2 keeps the same dark utility (it works against both palettes) */
 
 
 /* =============================================================
