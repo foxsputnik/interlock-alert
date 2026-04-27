@@ -1,0 +1,121 @@
+---
+// Native <dialog>-based quote popup. Triggered by any element with
+// `data-quote-open` attribute. Submits to Netlify Forms (form name
+// "contact" — same as the /contact page so they aggregate in one place).
+---
+<dialog id="quote-modal" class="quote-modal" aria-labelledby="quote-modal-title">
+  <button type="button" class="quote-modal__close" aria-label="Close" data-quote-close>
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+
+  <div class="quote-modal__inner">
+    <header class="quote-modal__head">
+      <span class="eyebrow">Get a quote</span>
+      <h2 id="quote-modal-title" class="quote-modal__h">Tell us what you drive.</h2>
+      <p class="quote-modal__p">Single vehicle or full fleet — we'll send a tailored quote and installation window, usually within one business day.</p>
+    </header>
+
+    <form
+      class="contact-form quote-modal__form"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/contact/thanks"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="contact-form__hp" aria-hidden="true" style="display:none">
+        <label>Don't fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <div class="form-row">
+        <label class="form-field">
+          <span class="form-field__label">Full name</span>
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+        <label class="form-field">
+          <span class="form-field__label">Company (optional)</span>
+          <input type="text" name="company" autocomplete="organization" />
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label class="form-field">
+          <span class="form-field__label">Email</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label class="form-field">
+          <span class="form-field__label">Phone</span>
+          <input type="tel" name="phone" autocomplete="tel" />
+        </label>
+      </div>
+
+      <label class="form-field">
+        <span class="form-field__label">What are you fitting?</span>
+        <select name="use_case" required>
+          <option value="">Select an option…</option>
+          <option value="fleet">Fleet operations (HGV, haulage, multi-drop)</option>
+          <option value="trades">Trades &amp; construction (vans, site vehicles)</option>
+          <option value="company">Company vehicles (pool cars, grey fleet)</option>
+          <option value="individual">Individual / family vehicle</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+
+      <div class="form-row">
+        <label class="form-field">
+          <span class="form-field__label">Number of vehicles</span>
+          <input type="number" name="vehicle_count" min="1" placeholder="e.g. 12" />
+        </label>
+        <label class="form-field">
+          <span class="form-field__label">Postcode</span>
+          <input type="text" name="postcode" autocomplete="postal-code" placeholder="For your nearest installer" />
+        </label>
+      </div>
+
+      <button type="submit" class="button button--primary button--lg form-submit">
+        <span class="button__label">Send enquiry</span>
+        <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </button>
+
+      <p class="form-note">
+        By submitting, you agree to be contacted about your enquiry. We never share or sell your details.
+      </p>
+    </form>
+  </div>
+</dialog>
+
+<script is:inline>
+  (() => {
+    const modal = document.getElementById('quote-modal');
+    if (!modal) return;
+    const open = (e) => {
+      e.preventDefault();
+      if (typeof modal.showModal === 'function') {
+        modal.showModal();
+      } else {
+        // Fallback for very old browsers
+        modal.setAttribute('open', '');
+      }
+      document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+      if (typeof modal.close === 'function') modal.close();
+      else modal.removeAttribute('open');
+      document.body.style.overflow = '';
+    };
+    document.querySelectorAll('[data-quote-open]').forEach((el) => {
+      el.addEventListener('click', open);
+    });
+    document.querySelectorAll('[data-quote-close]').forEach((el) => {
+      el.addEventListener('click', close);
+    });
+    // Click outside the dialog content to close (native backdrop click)
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) close();
+    });
+    modal.addEventListener('close', () => { document.body.style.overflow = ''; });
+  })();
+</script>

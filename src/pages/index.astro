@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import FinalCTA from '../components/FinalCTA.astro';
+import QuoteModal from '../components/QuoteModal.astro';
 ---
 <Layout>
   <!-- HERO -->
@@ -23,10 +24,10 @@ import FinalCTA from '../components/FinalCTA.astro';
         </ul>
 
         <div class="hero__cta">
-          <a href="/contact" class="button button--primary button--lg">
+          <button type="button" class="button button--primary button--lg" data-quote-open>
             <span class="button__label">Get a Quote</span>
             <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-          </a>
+          </button>
         </div>
       </div>
 
@@ -209,10 +210,10 @@ import FinalCTA from '../components/FinalCTA.astro';
           <li><svg class="icon-20" aria-hidden="true"><use href="#i-check"/></svg> <span>Export signed compliance reports in one click</span></li>
         </ul>
 
-        <a href="/contact" class="button button--primary">
+        <button type="button" class="button button--primary" data-quote-open>
           <span class="button__label">Get a Quote</span>
           <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-        </a>
+        </button>
       </div>
 
       <div class="portal__visual reveal reveal--delay-2" aria-hidden="true">
@@ -468,5 +469,6 @@ import FinalCTA from '../components/FinalCTA.astro';
     </div>
   </section>
 
-  <FinalCTA />
+  <FinalCTA useModal />
+  <QuoteModal />
 </Layout>
