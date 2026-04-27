@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Interlock Alert — A Memorandum on Road Safety · Issue One · MMXXVI</title>
+  <meta name="description" content="Interlock Alert — the only alcohol-interlock device in Britain with an identity-verifying driver camera and always-on 4G connectivity. A technical presentation for fleets, trades and families." />
+  <meta property="og:title" content="Interlock Alert — A Memorandum on Road Safety" />
+  <meta property="og:description" content="Camera-verified. Cloud-connected. Engineered in Britain." />
+
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        var stored = localStorage.getItem('theme-ed');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        if (theme === 'dark') root.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- =============================================================
+     SVG SPRITE (icons + ornaments)
+     ============================================================= -->
+<svg aria-hidden="true" style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+    <path d="M5 12h14M13 5l7 7-7 7"/>
+  </symbol>
+  <symbol id="i-arrow-ne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+    <path d="M7 17L17 7M8 7h9v9"/>
+  </symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+    <circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.5 5.5l1.5 1.5M17 17l1.5 1.5M5.5 18.5L7 17M17 7l1.5-1.5"/>
+  </symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+    <path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/>
+  </symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+    <path d="M12 5v14M5 12h14"/>
+  </symbol>
+  <symbol id="i-quote" viewBox="0 0 100 80" fill="currentColor">
+    <path d="M0 48C0 22 14 6 40 0l4 10C26 16 18 26 18 40c0 2 0 3 2 3h20v37H0V48zm56 0c0-26 14-42 40-48l4 10c-18 6-26 16-26 30 0 2 0 3 2 3h20v37H56V48z"/>
+  </symbol>
+</svg>
+
+<!-- =============================================================
+     RUNNING HEAD
+     ============================================================= -->
+<div class="runhead">
+  <div class="runhead__inner wrap">
+    <span class="runhead__mark">§</span>
+    <span class="runhead__text">Interlock Alert · A Memorandum on Road Safety · Issue One · MMXXVI</span>
+    <span class="runhead__folio">Folio 01 / 09</span>
+  </div>
+</div>
+
+<!-- =============================================================
+     MASTHEAD
+     ============================================================= -->
+<header class="mast">
+  <div class="wrap mast__inner">
+    <a class="mast__name" href="#top">
+      <span class="mast__name-primary">Interlock</span>
+      <span class="mast__name-divider" aria-hidden="true">—</span>
+      <span class="mast__name-secondary">Alert</span>
+    </a>
+    <nav class="mast__nav" aria-label="Primary">
+      <a class="mast__nav-link" href="#how"><span class="mast__nav-num">02</span><span>The protocol</span></a>
+      <a class="mast__nav-link" href="#features"><span class="mast__nav-num">03</span><span>The measures</span></a>
+      <a class="mast__nav-link" href="#in-service"><span class="mast__nav-num">04</span><span>In service</span></a>
+      <a class="mast__nav-link" href="#portal"><span class="mast__nav-num">05</span><span>The console</span></a>
+      <a class="mast__nav-link" href="#faq"><span class="mast__nav-num">08</span><span>Questions</span></a>
+    </nav>
+    <div class="mast__actions">
+      <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
+        <svg class="icon-18 theme-ico theme-ico--light" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="icon-18 theme-ico theme-ico--dark" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <a href="#quote" class="pill">
+        <span>Request a quotation</span>
+        <svg class="icon-16" aria-hidden="true"><use href="#i-arrow-ne"/></svg>
+      </a>
+    </div>
+  </div>
+  <hr class="rule rule--mast" />
+</header>
+
+<main id="top">
+
+  <!-- =============================================================
+       § 01 — HERO / THE CASE
+       ============================================================= -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+
+      <aside class="hero__meta" aria-hidden="true">
+        <div class="folio">
+          <span class="folio__glyph">§</span>
+          <span class="folio__num">01</span>
+        </div>
+        <div class="hero__meta-body">
+          <p class="micro">The Case</p>
+          <p class="kicker">A memorandum on the prevention of<br>drink-driving by mechanical and digital means.</p>
+        </div>
+      </aside>
+
+      <div class="hero__lede">
+        <hr class="rule rule--reveal" />
+        <p class="over">Filed this morning · London &amp; Halifax</p>
+        <h1 class="display">
+          <span class="line">The only interlock</span>
+          <span class="line">in Britain with</span>
+          <span class="line">a <em>camera.</em></span>
+        </h1>
+        <hr class="rule rule--reveal" />
+        <p class="lede">
+          Interlock Alert is a breath-test ignition lock, an identity-verifying driver camera and a GPS-tagged test log — in one 4G-connected device, installed under the dash of any vehicle on the British road. Every sample is provable. Every result is in your portal before the engine is cool.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#quote" class="cta">
+            <span class="cta__tick" aria-hidden="true">→</span>
+            <span class="cta__label">Request a quotation</span>
+          </a>
+          <p class="cta__note">
+            <span class="mono">UK-WIDE INSTALLATION</span>
+            <span class="sep">·</span>
+            <span class="mono">QUOTED WITHIN 24H</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Hero technical illustration — SVG line art, draws on load -->
+      <figure class="hero__plate">
+        <figcaption class="hero__plate-caption">
+          <span class="plate-num">Plate I.</span>
+          <span class="plate-desc">Interlock Alert Model 01 · exterior view with leader lines.</span>
+        </figcaption>
+
+        <svg class="plate" viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg" aria-label="Technical drawing of the Interlock Alert device" role="img">
+          <!-- grid markers -->
+          <g class="plate__grid">
+            <path d="M20 20 L60 20 M20 20 L20 60"/>
+            <path d="M580 20 L540 20 M580 20 L580 60"/>
+            <path d="M20 700 L60 700 M20 700 L20 660"/>
+            <path d="M580 700 L540 700 M580 700 L580 660"/>
+          </g>
+
+          <!-- breath tube -->
+          <g class="plate__stroke plate__tube">
+            <path d="M300 110 L300 50"/>
+            <path d="M285 110 Q285 65 320 50 Q356 36 366 52 L360 62 Q340 48 318 62 Q296 76 296 110 Z"/>
+            <ellipse cx="340" cy="48" rx="16" ry="5"/>
+          </g>
+
+          <!-- device body -->
+          <g class="plate__stroke plate__body">
+            <rect x="200" y="110" width="200" height="360" rx="16" ry="16"/>
+            <rect x="220" y="140" width="160" height="16" rx="4"/>
+            <!-- screen -->
+            <rect x="220" y="170" width="160" height="170" rx="4"/>
+            <!-- screen inner content -->
+            <text x="300" y="205" class="plate__text" text-anchor="middle">TEST STATUS</text>
+            <text x="300" y="260" class="plate__text plate__text--lg" text-anchor="middle">READY</text>
+            <text x="300" y="290" class="plate__text" text-anchor="middle">0.00 % BAC</text>
+            <line x1="240" y1="310" x2="360" y2="310"/>
+            <text x="300" y="328" class="plate__text plate__text--sm" text-anchor="middle">CAL · 10/26 · OK</text>
+            <!-- buttons -->
+            <circle cx="245" cy="400" r="18"/>
+            <circle cx="300" cy="400" r="18"/>
+            <circle cx="355" cy="400" r="18"/>
+            <text x="245" y="405" class="plate__text plate__text--sm" text-anchor="middle">▲</text>
+            <text x="300" y="405" class="plate__text plate__text--sm" text-anchor="middle">M</text>
+            <text x="355" y="405" class="plate__text plate__text--sm" text-anchor="middle">▼</text>
+            <!-- grille -->
+            <line x1="220" y1="440" x2="380" y2="440"/>
+            <line x1="220" y1="448" x2="380" y2="448"/>
+            <line x1="220" y1="456" x2="380" y2="456"/>
+          </g>
+
+          <!-- cable -->
+          <g class="plate__stroke plate__cable">
+            <path d="M300 470 Q300 540 380 560 Q460 580 470 640" fill="none"/>
+          </g>
+
+          <!-- annotations -->
+          <g class="plate__annot">
+            <!-- Camera -->
+            <circle cx="230" cy="148" r="4" class="annot-dot"/>
+            <path d="M230 148 L100 110 L40 110" class="annot-leader"/>
+            <text x="38" y="100" class="annot-label" text-anchor="start">A &middot; ID CAMERA · 1080p</text>
+            <text x="38" y="120" class="annot-label annot-label--sub" text-anchor="start">Captures driver at the moment<br/>of each sample</text>
+
+            <!-- Display -->
+            <circle cx="380" cy="255" r="4" class="annot-dot"/>
+            <path d="M380 255 L520 255 L570 255" class="annot-leader"/>
+            <text x="572" y="245" class="annot-label" text-anchor="end" transform="translate(568,0)">B · COLOUR DISPLAY</text>
+            <text x="572" y="265" class="annot-label annot-label--sub" text-anchor="end" transform="translate(568,0)">Ready / Pass / Fail / Retest</text>
+
+            <!-- Mouthpiece -->
+            <circle cx="346" cy="44" r="4" class="annot-dot"/>
+            <path d="M346 44 L480 30 L560 30" class="annot-leader"/>
+            <text x="572" y="20" class="annot-label" text-anchor="end" transform="translate(568,0)">C · MOUTHPIECE</text>
+            <text x="572" y="40" class="annot-label annot-label--sub" text-anchor="end" transform="translate(568,0)">Single-use · replaceable</text>
+
+            <!-- Fuel-cell sensor -->
+            <circle cx="300" cy="380" r="4" class="annot-dot"/>
+            <path d="M300 380 L160 420 L40 420" class="annot-leader"/>
+            <text x="38" y="410" class="annot-label" text-anchor="start">D · FUEL-CELL SENSOR</text>
+            <text x="38" y="430" class="annot-label annot-label--sub" text-anchor="start">Clinical-grade, ±5 µg/100ml</text>
+
+            <!-- 4G antenna -->
+            <circle cx="400" cy="440" r="4" class="annot-dot"/>
+            <path d="M400 440 L520 500 L570 500" class="annot-leader"/>
+            <text x="572" y="490" class="annot-label" text-anchor="end" transform="translate(568,0)">E · 4G + GPS</text>
+            <text x="572" y="510" class="annot-label annot-label--sub" text-anchor="end" transform="translate(568,0)">Always-on cloud telemetry</text>
+
+            <!-- Loom -->
+            <circle cx="462" cy="628" r="4" class="annot-dot"/>
+            <path d="M462 628 L520 660 L570 660" class="annot-leader"/>
+            <text x="572" y="650" class="annot-label" text-anchor="end" transform="translate(568,0)">F · ECU LOOM</text>
+            <text x="572" y="670" class="annot-label annot-label--sub" text-anchor="end" transform="translate(568,0)">Engine immobilised at ECU level</text>
+          </g>
+        </svg>
+      </figure>
+
+      <div class="hero__ledger">
+        <dl class="ledger">
+          <div class="ledger__row">
+            <dt>Vehicles protected</dt><dd>15,000<span class="mono ledger__plus">+</span></dd>
+          </div>
+          <div class="ledger__row">
+            <dt>UK operators</dt><dd>142</dd>
+          </div>
+          <div class="ledger__row">
+            <dt>Compliance</dt><dd>99.4<span class="mono ledger__plus">%</span></dd>
+          </div>
+          <div class="ledger__row">
+            <dt>Installation</dt><dd>≤ 5d</dd>
+          </div>
+        </dl>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       § 02 — THE PROTOCOL
+       ============================================================= -->
+  <section class="chapter" id="how">
+    <div class="wrap">
+      <header class="chapter__head">
+        <div class="folio"><span class="folio__glyph">§</span><span class="folio__num">02</span></div>
+        <div>
+          <p class="micro">The Protocol</p>
+          <h2 class="head">Four seconds between ignition<br>and accountability.</h2>
+        </div>
+      </header>
+      <hr class="rule" />
+
+      <ol class="protocol" role="list">
+        <li class="protocol__step">
+          <span class="protocol__num">i.</span>
+          <h3 class="protocol__title">Breathe</h3>
+          <p class="protocol__body">Driver blows into the mouthpiece. Front camera captures an identity frame at the instant of the sample — no anonymous blowing.</p>
+          <span class="protocol__mark">A</span>
+        </li>
+        <li class="protocol__step">
+          <span class="protocol__num">ii.</span>
+          <h3 class="protocol__title">Analyse</h3>
+          <p class="protocol__body">A clinical-grade fuel-cell sensor measures blood alcohol against the vehicle's pre-set threshold. Result returned in under three seconds.</p>
+          <span class="protocol__mark">B</span>
+        </li>
+        <li class="protocol__step">
+          <span class="protocol__num">iii.</span>
+          <h3 class="protocol__title">Permit or immobilise</h3>
+          <p class="protocol__body">Below threshold: the ignition enables. Above it: the engine is immobilised at the ECU. No warning mode. No bypass.</p>
+          <span class="protocol__mark">C</span>
+        </li>
+        <li class="protocol__step">
+          <span class="protocol__num">iv.</span>
+          <h3 class="protocol__title">Log &amp; transmit</h3>
+          <p class="protocol__body">Every sample — pass, fail, retest — is stamped with driver photo, GPS and timestamp, and is in the portal inside ten seconds.</p>
+          <span class="protocol__mark">D</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       § 03 — FEATURES
+       ============================================================= -->
+  <section class="chapter chapter--paper-dark" id="features">
+    <div class="wrap">
+      <header class="chapter__head">
+        <div class="folio folio--invert"><span class="folio__glyph">§</span><span class="folio__num">03</span></div>
+        <div>
+          <p class="micro">The Measures</p>
+          <h2 class="head">Nine measures, unified in one device.</h2>
+          <p class="subhead">Every Interlock Alert ships with the full catalogue. No tiers. No features locked behind a larger fleet.</p>
+        </div>
+      </header>
+      <hr class="rule" />
+
+      <ul class="catalogue" role="list">
+        <li class="entry entry--headline">
+          <span class="entry__id">.01</span>
+          <div class="entry__body">
+            <h3 class="entry__name">Driver ID camera
+              <span class="entry__badge">UK exclusive</span>
+            </h3>
+            <p class="entry__desc">The only interlock on the British market with an integrated identity camera. Every sample has a face attached. Colleague-substitution is over.</p>
+          </div>
+        </li>
+        <li class="entry entry--headline">
+          <span class="entry__id">.02</span>
+          <div class="entry__body">
+            <h3 class="entry__name">Always-on 4G connectivity
+              <span class="entry__badge entry__badge--ghost">Live</span>
+            </h3>
+            <p class="entry__desc">Each device streams test results, driver photographs and GPS to your portal in seconds — not at the next service visit. Anywhere there's a UK signal.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="entry__id">.03</span>
+          <div class="entry__body">
+            <h3 class="entry__name">GPS-tagged every test</h3>
+            <p class="entry__desc">Every sample is geo-stamped to the street. Provable location for every pass, fail or skipped retest.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="entry__id">.04</span>
+          <div class="entry__body">
+            <h3 class="entry__name">Full engine immobilisation</h3>
+            <p class="entry__desc">A failed test prevents the engine from starting at the ECU level. No warning mode. No second attempt. No bypass sequence.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="entry__id">.05</span>
+          <div class="entry__body">
+            <h3 class="entry__name">Per-vehicle BAC limits</h3>
+            <p class="entry__desc">Zero-tolerance on the HGV; 35 µg on the company car. Set from the portal — propagates to the device in seconds.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="entry__id">.06</span>
+          <div class="entry__body">
+            <h3 class="entry__name">EV &amp; hybrid compatible</h3>
+            <p class="entry__desc">Certified for battery-electric, plug-in, hybrid, petrol and diesel. One supplier for a mixed modern fleet.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="entry__id">.07</span>
+          <div class="entry__body">
+            <h3 class="entry__name">Self-service portal</h3>
+            <p class="entry__desc">Add vehicles, assign drivers, pull compliance reports, export CSVs — without opening a support ticket.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="entry__id">.08</span>
+          <div class="entry__body">
+            <h3 class="entry__name">Override &amp; service mode</h3>
+            <p class="entry__desc">Authorised maintenance and valet parking without tripping a fail. Every override is itself logged and attributed.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="entry__id">.09</span>
+          <div class="entry__body">
+            <h3 class="entry__name">Lowest monthly pricing</h3>
+            <p class="entry__desc">Transparent per-device pricing. No activation fee, no per-test charge, no lock-in contract.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       § 04 — IN SERVICE WITH
+       ============================================================= -->
+  <section class="chapter" id="in-service">
+    <div class="wrap">
+      <header class="chapter__head">
+        <div class="folio"><span class="folio__glyph">§</span><span class="folio__num">04</span></div>
+        <div>
+          <p class="micro">In Service With</p>
+          <h2 class="head">Fit to anyone with something to<br>lose behind the wheel.</h2>
+        </div>
+      </header>
+      <hr class="rule" />
+
+      <div class="audience">
+        <article class="audience__card">
+          <span class="audience__num">I.</span>
+          <h3 class="audience__name">Fleet operators</h3>
+          <p class="audience__body">Logistics, haulage and delivery operators protecting their O-licence and duty of care across every vehicle, every shift.</p>
+          <span class="audience__cta">Discuss this use <svg class="icon-14" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
+        </article>
+        <article class="audience__card">
+          <span class="audience__num">II.</span>
+          <h3 class="audience__name">Trades &amp; construction</h3>
+          <p class="audience__body">Van fleets and site vehicles where a single incident doesn't only cost a driver — it costs the contract.</p>
+          <span class="audience__cta">Discuss this use <svg class="icon-14" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
+        </article>
+        <article class="audience__card">
+          <span class="audience__num">III.</span>
+          <h3 class="audience__name">Company vehicles</h3>
+          <p class="audience__body">Grey and assigned-driver fleets where insurance, reputation and a clean record all sit on the line.</p>
+          <span class="audience__cta">Discuss this use <svg class="icon-14" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
+        </article>
+        <article class="audience__card">
+          <span class="audience__num">IV.</span>
+          <h3 class="audience__name">Individuals &amp; families</h3>
+          <p class="audience__body">Private buyers drawing a line — for a new driver, a recovery journey or simple peace of mind at home.</p>
+          <span class="audience__cta">Discuss this use <svg class="icon-14" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       § 05 — THE CONSOLE (portal)
+       ============================================================= -->
+  <section class="chapter" id="portal">
+    <div class="wrap console__grid">
+      <header class="console__copy">
+        <div class="folio"><span class="folio__glyph">§</span><span class="folio__num">05</span></div>
+        <p class="micro">The Console</p>
+        <h2 class="head head--md">Every vehicle.<br>Every test.<br><em>One window.</em></h2>
+        <p class="subhead">The Interlock Alert portal gives live visibility into every device you run — with the remote controls to act on what you see, from anywhere in Britain.</p>
+        <hr class="rule rule--sm" />
+        <ul class="console__list" role="list">
+          <li><span class="console__tick">✓</span><span>Set BAC limits per vehicle, per driver, per shift.</span></li>
+          <li><span class="console__tick">✓</span><span>Review every test with driver photo and GPS pin.</span></li>
+          <li><span class="console__tick">✓</span><span>Track live vehicle locations across the fleet.</span></li>
+          <li><span class="console__tick">✓</span><span>Export signed compliance reports in one click.</span></li>
+        </ul>
+        <a href="#quote" class="cta">
+          <span class="cta__tick" aria-hidden="true">→</span>
+          <span class="cta__label">Request a quotation</span>
+        </a>
+      </header>
+
+      <!-- Dashboard schematic -->
+      <figure class="console__plate">
+        <figcaption class="plate-caption">
+          <span class="plate-num">Plate II.</span>
+          <span class="plate-desc">Portal console · fleet overview.</span>
+        </figcaption>
+        <div class="console">
+          <div class="console__chrome">
+            <span class="console__dot"></span><span class="console__dot"></span><span class="console__dot"></span>
+            <span class="console__url">interlockalert.co.uk / portal</span>
+          </div>
+          <div class="console__body">
+            <aside class="console__side">
+              <div class="console__brand"><span class="mono">IA</span>·Admin</div>
+              <div class="console__nav console__nav--active">Dashboard</div>
+              <div class="console__nav">Vehicles</div>
+              <div class="console__nav">Drivers</div>
+              <div class="console__nav">Test logs</div>
+              <div class="console__nav">Reports</div>
+              <div class="console__nav">Settings</div>
+            </aside>
+            <div class="console__main">
+              <div class="console__headline">
+                <span class="console__h">Fleet overview</span>
+                <span class="console__pill mono">24H</span>
+              </div>
+              <div class="console__stats">
+                <div class="cstat">
+                  <div class="cstat__label mono">VEHICLES</div>
+                  <div class="cstat__v">142</div>
+                  <div class="cstat__d">+3 wk</div>
+                </div>
+                <div class="cstat">
+                  <div class="cstat__label mono">TESTS TODAY</div>
+                  <div class="cstat__v">518</div>
+                  <div class="cstat__d">99.4% pass</div>
+                </div>
+                <div class="cstat cstat--amber">
+                  <div class="cstat__label mono">COMPLIANCE</div>
+                  <div class="cstat__v">99.4%</div>
+                  <div class="cstat__d">30-day</div>
+                </div>
+              </div>
+              <div class="console__logs">
+                <div class="log-row log-row--head mono">
+                  <span>Driver</span><span>Vehicle</span><span>Result</span><span>Location</span>
+                </div>
+                <div class="log-row">
+                  <span><em>Marcus Tate</em></span><span class="mono">FD71 KPA</span>
+                  <span class="tag tag--pass">PASS 0µg</span>
+                  <span class="mono">BIRMINGHAM</span>
+                </div>
+                <div class="log-row">
+                  <span><em>Jade Richardson</em></span><span class="mono">YX19 LMO</span>
+                  <span class="tag tag--pass">PASS 0µg</span>
+                  <span class="mono">LEEDS</span>
+                </div>
+                <div class="log-row">
+                  <span><em>Dan Walsh</em></span><span class="mono">BN22 EGF</span>
+                  <span class="tag tag--fail">FAIL 48µg</span>
+                  <span class="mono">GLASGOW</span>
+                </div>
+                <div class="log-row">
+                  <span><em>Anya Kowalski</em></span><span class="mono">LS70 VRP</span>
+                  <span class="tag tag--pass">PASS 0µg</span>
+                  <span class="mono">BRISTOL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       § 06 — UNIVERSAL FITMENT
+       ============================================================= -->
+  <section class="chapter chapter--tight" id="compat">
+    <div class="wrap fitment">
+      <div class="folio folio--inline"><span class="folio__glyph">§</span><span class="folio__num">06</span></div>
+      <p class="micro">Universal Fitment</p>
+      <h2 class="head head--md">Every drivetrain on the British road.</h2>
+      <p class="subhead fitment__sub">Petrol, diesel, hybrid, battery-electric — right-hand drive, CAN-bus or legacy. All UK makes.</p>
+      <hr class="rule rule--amber" />
+      <ul class="fitment__row" role="list">
+        <li class="fit"><span class="fit__mark">·</span>Petrol</li>
+        <li class="fit"><span class="fit__mark">·</span>Diesel</li>
+        <li class="fit"><span class="fit__mark">·</span>Battery-electric</li>
+        <li class="fit"><span class="fit__mark">·</span>Hybrid &amp; plug-in</li>
+        <li class="fit"><span class="fit__mark">·</span>LCV &amp; HGV</li>
+      </ul>
+      <p class="fitment__foot mono">UK-WIDE PROFESSIONAL INSTALLATION · ENGINEERS IN EVERY REGION · ≤ 5 WORKING DAYS</p>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       § 07 — IN THEIR WORDS
+       ============================================================= -->
+  <section class="chapter" id="words">
+    <div class="wrap testimony">
+      <header class="chapter__head">
+        <div class="folio"><span class="folio__glyph">§</span><span class="folio__num">07</span></div>
+        <div>
+          <p class="micro">In Their Words</p>
+          <h2 class="head">Built in Britain. Backed by operators<br>who depend on it.</h2>
+        </div>
+      </header>
+      <hr class="rule" />
+
+      <blockquote class="pullquote">
+        <svg class="pullquote__glyph" aria-hidden="true"><use href="#i-quote"/></svg>
+        <p class="pullquote__body">
+          We fitted Interlock Alert across our service fleet and the <em>camera-verified tests</em> gave us the audit trail our insurer wanted on day one. The portal is the first one I've actually used daily without cursing at it.
+        </p>
+        <footer class="pullquote__by">
+          <div class="pullquote__by-text">
+            <p class="pullquote__name">Rhys Hainsworth</p>
+            <p class="pullquote__role">Target Tyres (Halifax) Ltd.</p>
+          </div>
+          <div class="pullquote__mark">
+            <img src="../images/target-tyres.png" alt="Target Tyres (Halifax) Ltd" class="pullquote__logo" />
+          </div>
+        </footer>
+      </blockquote>
+
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar__num">i.</span>
+          <h3 class="pillar__name">UK-based support</h3>
+          <p class="pillar__body">Engineers, not a script. Monday through Saturday, without an IVR.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar__num">ii.</span>
+          <h3 class="pillar__name">Professional installation</h3>
+          <p class="pillar__body">Certified auto-electricians — warranty-safe, dealer-grade work.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar__num">iii.</span>
+          <h3 class="pillar__name">Built for reliability</h3>
+          <p class="pillar__body">Fuel-cell sensors calibrated annually to clinical-grade accuracy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       § 08 — QUESTIONS OF FACT
+       ============================================================= -->
+  <section class="chapter chapter--paper-dark" id="faq">
+    <div class="wrap faq-wrap">
+      <header class="chapter__head">
+        <div class="folio folio--invert"><span class="folio__glyph">§</span><span class="folio__num">08</span></div>
+        <div>
+          <p class="micro">Questions of Fact</p>
+          <h2 class="head">Frequently asked.</h2>
+        </div>
+      </header>
+      <hr class="rule" />
+
+      <dl class="qna" role="list">
+        <details class="qna__item">
+          <summary class="qna__q">
+            <span class="qna__num">01.</span>
+            <span>Is fitting an alcohol interlock legal in the UK?</span>
+            <svg class="icon-20 qna__plus" aria-hidden="true"><use href="#i-plus"/></svg>
+          </summary>
+          <div class="qna__a"><p>Yes. Interlocks are fully legal for private, commercial and fleet use in the UK. They are installed by certified engineers and do not interfere with your vehicle's warranty or MOT.</p></div>
+        </details>
+        <details class="qna__item">
+          <summary class="qna__q">
+            <span class="qna__num">02.</span>
+            <span>Which vehicles is it compatible with?</span>
+            <svg class="icon-20 qna__plus" aria-hidden="true"><use href="#i-plus"/></svg>
+          </summary>
+          <div class="qna__a"><p>Interlock Alert supports petrol, diesel, hybrid and pure-electric vehicles, including CAN-bus and keyless-start platforms. If it's road-legal in the UK, we install on it.</p></div>
+        </details>
+        <details class="qna__item">
+          <summary class="qna__q">
+            <span class="qna__num">03.</span>
+            <span>What happens if a driver fails a test?</span>
+            <svg class="icon-20 qna__plus" aria-hidden="true"><use href="#i-plus"/></svg>
+          </summary>
+          <div class="qna__a"><p>The engine is immobilised at the ECU. The vehicle will not start. The failed event is logged with a driver photo, GPS location and timestamp, and an alert is sent to your nominated contacts by SMS and email.</p></div>
+        </details>
+        <details class="qna__item">
+          <summary class="qna__q">
+            <span class="qna__num">04.</span>
+            <span>Can the device be bypassed?</span>
+            <svg class="icon-20 qna__plus" aria-hidden="true"><use href="#i-plus"/></svg>
+          </summary>
+          <div class="qna__a"><p>No. The driver-ID camera verifies who blew the sample, and a random rolling retest prevents a vehicle from being started sober and then handed over. Any tamper attempt is logged and flagged.</p></div>
+        </details>
+        <details class="qna__item">
+          <summary class="qna__q">
+            <span class="qna__num">05.</span>
+            <span>Who has access to the test data?</span>
+            <svg class="icon-20 qna__plus" aria-hidden="true"><use href="#i-plus"/></svg>
+          </summary>
+          <div class="qna__a"><p>You do. Data is stored on UK-hosted infrastructure under your account, with granular role-based access for managers, admins and auditors. We never sell, resell or share your data.</p></div>
+        </details>
+      </dl>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       § 09 — REQUEST A QUOTATION
+       ============================================================= -->
+  <section class="notice" id="quote">
+    <div class="wrap notice__inner">
+      <div class="notice__head">
+        <span class="mono">§ 09 — EDITION NOTICE</span>
+        <span class="notice__rule" aria-hidden="true"></span>
+        <span class="mono">MMXXVI</span>
+      </div>
+      <h2 class="notice__h">
+        Don't wait<br>
+        for the call you <em>didn't</em><br>
+        want to take.
+      </h2>
+      <p class="notice__p">Tell us what you drive and where you are. We'll return a tailored quotation and installation window, usually within a single business day.</p>
+      <a href="mailto:quote@interlockalert.co.uk" class="notice__cta">
+        <span>Request a quotation</span>
+        <span class="notice__arrow" aria-hidden="true">→</span>
+      </a>
+      <ul class="notice__foot mono" role="list">
+        <li>UK-wide installation</li>
+        <li>No activation fee</li>
+        <li>Cancel anytime</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- =============================================================
+     COLOPHON
+     ============================================================= -->
+<footer class="colophon">
+  <hr class="rule rule--thick" />
+  <div class="wrap colophon__inner">
+    <div class="colophon__brand">
+      <p class="mast__name">
+        <span class="mast__name-primary">Interlock</span>
+        <span class="mast__name-divider" aria-hidden="true">—</span>
+        <span class="mast__name-secondary">Alert</span>
+      </p>
+      <p class="colophon__tag">The drink-driving countermeasure · Engineered in Britain.</p>
+    </div>
+
+    <div class="colophon__cols">
+      <div>
+        <p class="mono col-h">PRODUCT</p>
+        <ul role="list"><li><a href="#how">The protocol</a></li><li><a href="#features">The measures</a></li><li><a href="#portal">The console</a></li><li><a href="#compat">Universal fitment</a></li></ul>
+      </div>
+      <div>
+        <p class="mono col-h">USE</p>
+        <ul role="list"><li><a href="#in-service">Fleet operators</a></li><li><a href="#in-service">Trades &amp; construction</a></li><li><a href="#in-service">Company vehicles</a></li><li><a href="#in-service">Individuals &amp; families</a></li></ul>
+      </div>
+      <div>
+        <p class="mono col-h">OFFICE</p>
+        <ul role="list"><li><a href="#">Contact</a></li><li><a href="#">Installation network</a></li><li><a href="#">Support</a></li><li><a href="#">Press</a></li></ul>
+      </div>
+      <div>
+        <p class="mono col-h">LEGAL</p>
+        <ul role="list"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Cookies</a></li><li><a href="#">Modern Slavery</a></li></ul>
+      </div>
+    </div>
+
+    <div class="colophon__meta">
+      <p class="mono">© MMXXVI · Interlock Alert Ltd · Reg. in England</p>
+      <p class="mono">Set in <em>Fraunces</em> &amp; <em>Geist</em>. Produced in the United Kingdom.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

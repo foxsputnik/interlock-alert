@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Contact Interlock Alert — Get a quote"
+  description="Tell us what you drive and where you are. We'll send a tailored quote and installation window, usually within one business day."
+>
+  <section class="hero hero--inner">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="wrap hero__grid hero__grid--narrow">
+      <div class="hero__copy reveal">
+        <span class="eyebrow">Get a quote</span>
+        <h1 class="display">
+          Tell us what you drive. <span class="display__fade">We'll do the rest.</span>
+        </h1>
+        <p class="hero__sub">
+          Single vehicle or full fleet — we'll send a tailored quote and an installation window, usually within one business day. UK-wide, no activation fees, no long contracts.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--band">
+    <div class="wrap wrap--narrow">
+      <div class="contact-grid reveal">
+        <div class="contact-aside">
+          <h2 class="contact-aside__h">Prefer a direct line?</h2>
+          <ul class="contact-aside__list" role="list">
+            <li>
+              <svg class="icon-20" aria-hidden="true"><use href="#i-mail"/></svg>
+              <a href="mailto:hello@interlockalert.co.uk">hello@interlockalert.co.uk</a>
+            </li>
+            <li>
+              <svg class="icon-20" aria-hidden="true"><use href="#i-phone"/></svg>
+              <a href="tel:+443300000000">0330 000 0000</a>
+            </li>
+            <li>
+              <svg class="icon-20" aria-hidden="true"><use href="#i-gb"/></svg>
+              <span>UK-wide, Monday – Saturday</span>
+            </li>
+          </ul>
+          <ul class="contact-aside__bullets" role="list">
+            <li><svg class="icon-18" aria-hidden="true"><use href="#i-check"/></svg> Tailored quote within one business day</li>
+            <li><svg class="icon-18" aria-hidden="true"><use href="#i-check"/></svg> No activation fee</li>
+            <li><svg class="icon-18" aria-hidden="true"><use href="#i-check"/></svg> Cancel anytime</li>
+          </ul>
+        </div>
+
+        <form
+          class="contact-form card card--elevated"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/contact/thanks"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="contact-form__hp" aria-hidden="true" style="display:none">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-row">
+            <label class="form-field">
+              <span class="form-field__label">Full name</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label class="form-field">
+              <span class="form-field__label">Company (optional)</span>
+              <input type="text" name="company" autocomplete="organization" />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label class="form-field">
+              <span class="form-field__label">Email</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label class="form-field">
+              <span class="form-field__label">Phone</span>
+              <input type="tel" name="phone" autocomplete="tel" />
+            </label>
+          </div>
+
+          <label class="form-field">
+            <span class="form-field__label">What are you fitting?</span>
+            <select name="use_case" required>
+              <option value="">Select an option…</option>
+              <option value="fleet">Fleet operations (HGV, haulage, multi-drop)</option>
+              <option value="trades">Trades &amp; construction (vans, site vehicles)</option>
+              <option value="company">Company vehicles (pool cars, grey fleet)</option>
+              <option value="individual">Individual / family vehicle</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+
+          <div class="form-row">
+            <label class="form-field">
+              <span class="form-field__label">Number of vehicles</span>
+              <input type="number" name="vehicle_count" min="1" placeholder="e.g. 12" />
+            </label>
+            <label class="form-field">
+              <span class="form-field__label">Postcode</span>
+              <input type="text" name="postcode" autocomplete="postal-code" placeholder="For your nearest installer" />
+            </label>
+          </div>
+
+          <label class="form-field">
+            <span class="form-field__label">Anything else we should know?</span>
+            <textarea name="message" rows="4" placeholder="Drivetrains, timing, specific compliance requirements…"></textarea>
+          </label>
+
+          <button type="submit" class="button button--primary button--lg form-submit">
+            <span class="button__label">Send enquiry</span>
+            <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+
+          <p class="form-note">
+            By submitting, you agree to be contacted about your enquiry. We never share or sell your details.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>

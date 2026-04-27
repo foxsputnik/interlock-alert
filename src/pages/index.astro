@@ -1,0 +1,472 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+---
+<Layout>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="wrap hero__grid">
+      <div class="hero__copy reveal">
+        <span class="eyebrow">Automatic driver alcohol screening</span>
+        <h1 class="display">
+          Stop drink driving before the engine <span class="display__fade">ever starts.</span>
+        </h1>
+        <p class="hero__sub">
+          A practical way to enforce your driver alcohol policy at vehicle start. Replace inconsistent spot checks with automatic, camera-verified pre-drive screening.
+        </p>
+
+        <ul class="hero__checklist" role="list">
+          <li><svg class="icon-18" aria-hidden="true"><use href="#i-check"/></svg> Absolute duty of care protection</li>
+          <li><svg class="icon-18" aria-hidden="true"><use href="#i-check"/></svg> Irrefutable digital audit trail</li>
+          <li><svg class="icon-18" aria-hidden="true"><use href="#i-check"/></svg> End manual administration</li>
+        </ul>
+
+        <div class="hero__cta">
+          <a href="/contact" class="button button--primary button--lg">
+            <span class="button__label">Get a Quote</span>
+            <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal reveal--delay-2">
+        <figure class="hero__media">
+          <img
+            src="/images/hero-driver.png"
+            alt="HGV driver in a hi-vis vest using an Interlock Alert device inside a lorry cab — the device screen shows a green PASS result."
+            class="hero__media-img"
+            width="2000"
+            height="1000"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section--band" id="how-it-works">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">How it works</span>
+        <h2 class="section__heading">Four seconds between getting in the vehicle and knowing it's safe to drive.</h2>
+      </header>
+
+      <ol class="steps" role="list">
+        <li class="step reveal">
+          <div class="step__num">01</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-wind"/></svg></div>
+          <h3 class="step__title">Breath test</h3>
+          <p class="step__body">The driver blows into the handheld unit. A front-facing camera captures a photo to verify identity at the moment of the sample.</p>
+        </li>
+        <li class="step reveal reveal--delay-1">
+          <div class="step__num">02</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-activity"/></svg></div>
+          <h3 class="step__title">BAC analysis</h3>
+          <p class="step__body">Fuel-cell sensor measures blood alcohol to a vehicle-specific limit you set from the portal. Result returned in under three seconds.</p>
+        </li>
+        <li class="step reveal reveal--delay-2">
+          <div class="step__num">03</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-key"/></svg></div>
+          <h3 class="step__title">Start or immobilise</h3>
+          <p class="step__body">Below the threshold, the ignition enables. Above it, the engine is fully immobilised — no second attempt, no rolling start.</p>
+        </li>
+        <li class="step reveal reveal--delay-3">
+          <div class="step__num">04</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-file-log"/></svg></div>
+          <h3 class="step__title">Everything logged</h3>
+          <p class="step__body">Every test — pass or fail — is stamped with GPS coordinates, driver photo and timestamp, then synced to your portal in real time.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">Connected by design</span>
+        <h2 class="section__heading">A camera-verified, cloud-connected interlock — the only one in the UK that's both.</h2>
+        <p class="section__lede section__lede--compact">Every Interlock Alert device pairs an identity-verifying driver camera with always-on 4G connectivity. Every test is provable, and every result lands in your portal within seconds.</p>
+      </header>
+
+      <div class="feature-grid">
+        <article class="feature feature--hero reveal">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-camera"/></svg></div>
+          <h3 class="feature__title">Driver ID camera</h3>
+          <p class="feature__body">The only UK interlock with an integrated identity camera. A photo is captured at the moment of every sample — stops drivers asking a sober colleague to blow for them.</p>
+          <span class="feature__badge">UK exclusive</span>
+        </article>
+        <article class="feature feature--hero reveal reveal--delay-1">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-bell"/></svg></div>
+          <h3 class="feature__title">Always-on 4G connectivity</h3>
+          <p class="feature__body">Every device streams test results, driver photos and GPS to your portal in seconds — not at the next service visit. Works anywhere there's a UK signal.</p>
+          <span class="feature__badge feature__badge--alt">Live cloud</span>
+        </article>
+        <article class="feature reveal reveal--delay-2">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-map-pin"/></svg></div>
+          <h3 class="feature__title">GPS-tagged every test</h3>
+          <p class="feature__body">Every sample is geo-stamped down to the street. See exactly where a driver tested, passed, failed or skipped a retest — in real time.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-lock"/></svg></div>
+          <h3 class="feature__title">Full engine immobilisation</h3>
+          <p class="feature__body">A failed test prevents the engine from starting at the ECU level. No warning mode. No bypass sequence. No second attempt.</p>
+        </article>
+        <article class="feature reveal reveal--delay-1">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-sliders"/></svg></div>
+          <h3 class="feature__title">Per-vehicle BAC limits</h3>
+          <p class="feature__body">Zero-tolerance on the HGV, 35µg on the company car. Set the threshold per vehicle from the portal in a single tap.</p>
+        </article>
+        <article class="feature reveal reveal--delay-2">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-bolt"/></svg></div>
+          <h3 class="feature__title">EV &amp; hybrid compatible</h3>
+          <p class="feature__body">Certified for pure-electric and hybrid drivetrains alongside petrol and diesel. One supplier for a mixed modern fleet.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-monitor"/></svg></div>
+          <h3 class="feature__title">Self-service portal</h3>
+          <p class="feature__body">Add vehicles, assign drivers, pull compliance reports and export CSVs — all without calling support.</p>
+        </article>
+        <article class="feature reveal reveal--delay-1">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-wrench"/></svg></div>
+          <h3 class="feature__title">Override &amp; service mode</h3>
+          <p class="feature__body">Authorised maintenance and valet parking without tripping a fail. Every override action is itself logged and attributed.</p>
+        </article>
+        <article class="feature reveal reveal--delay-2">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-shield-check"/></svg></div>
+          <h3 class="feature__title">Lowest monthly pricing</h3>
+          <p class="feature__body">Transparent per-device monthly pricing. No activation fees, no per-test charges, no long lock-in contracts.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="section section--band" id="use-cases">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">Who it's for</span>
+        <h2 class="section__heading">Built for everyone who carries the cost when it goes wrong.</h2>
+        <p class="section__lede section__lede--compact">A single drink-drive incident never lands on the driver alone. Operators lose the contract, tradespeople lose the insurance, families lose far more. Interlock Alert takes the decision off the road entirely — so it never reaches any of them.</p>
+      </header>
+
+      <div class="usecase-grid">
+        <a class="usecase usecase--photo reveal" href="/use-cases/fleet-operators">
+          <figure class="usecase__media">
+            <img src="/images/fleet-operators.jpg" alt="Fleet of HGV trucks on a UK motorway" class="usecase__media-img" loading="lazy" decoding="async" />
+          </figure>
+          <div class="usecase__content">
+            <h3 class="usecase__title">Fleet operators</h3>
+            <p class="usecase__body">For logistics, haulage and multi-drop operations managing O-licence compliance and driver duty of care — where a single failed test needs to be on record before the engine ever starts.</p>
+          </div>
+        </a>
+        <a class="usecase usecase--photo reveal reveal--delay-1" href="/use-cases/trades-and-construction">
+          <figure class="usecase__media">
+            <img src="/images/site-vehicles.png" alt="Construction site vehicles and vans on a UK building site" class="usecase__media-img" loading="lazy" decoding="async" />
+          </figure>
+          <div class="usecase__content">
+            <h3 class="usecase__title">Trades &amp; construction</h3>
+            <p class="usecase__body">Site vehicles and van fleets where a single drink-drive incident doesn't just ground a driver — it pulls the contract, the insurance and the company name with it.</p>
+          </div>
+        </a>
+        <a class="usecase usecase--photo reveal reveal--delay-2" href="/use-cases/company-vehicles">
+          <figure class="usecase__media">
+            <img src="/images/car-fleet.jpg" alt="Row of company fleet cars parked outside a UK office building" class="usecase__media-img" loading="lazy" decoding="async" />
+          </figure>
+          <div class="usecase__content">
+            <h3 class="usecase__title">Company vehicles</h3>
+            <p class="usecase__body">Pool cars, grey fleet and named-driver vehicles. The moment your branding goes on the door, every mile is the company's problem — duty of care, insurance and reputation included.</p>
+          </div>
+        </a>
+        <a class="usecase usecase--photo reveal reveal--delay-3" href="/use-cases/individuals-and-families">
+          <figure class="usecase__media">
+            <img src="/images/personal-car.jpg" alt="Individual driver beside a personal car on a residential street" class="usecase__media-img" loading="lazy" decoding="async" />
+          </figure>
+          <div class="usecase__content">
+            <h3 class="usecase__title">Individuals &amp; families</h3>
+            <p class="usecase__body">Some lines are non-negotiable. A newly qualified driver building good habits. Someone protecting their recovery. A household that needs to know — for certain — the car won't move if they've been drinking.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTAL -->
+  <section class="section" id="portal">
+    <div class="wrap portal__grid">
+      <div class="portal__copy reveal">
+        <span class="section__eyebrow">Your control room</span>
+        <h2 class="section__heading">Every vehicle, every test, one dashboard.</h2>
+        <p class="section__lede">The Interlock Alert portal gives you live visibility into every device you run — with the remote controls to act on what you see, from anywhere in the UK.</p>
+
+        <ul class="portal__bullets" role="list">
+          <li><svg class="icon-20" aria-hidden="true"><use href="#i-check"/></svg> <span>Set BAC limits per vehicle, per driver, per shift</span></li>
+          <li><svg class="icon-20" aria-hidden="true"><use href="#i-check"/></svg> <span>Review every test with driver photo and GPS pin</span></li>
+          <li><svg class="icon-20" aria-hidden="true"><use href="#i-check"/></svg> <span>Track live vehicle locations across the fleet</span></li>
+          <li><svg class="icon-20" aria-hidden="true"><use href="#i-check"/></svg> <span>Export signed compliance reports in one click</span></li>
+        </ul>
+
+        <a href="/contact" class="button button--primary">
+          <span class="button__label">Get a Quote</span>
+          <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </a>
+      </div>
+
+      <div class="portal__visual reveal reveal--delay-2" aria-hidden="true">
+        <div class="dash">
+          <div class="dash__chrome">
+            <span class="dash__dot dash__dot--r"></span>
+            <span class="dash__dot dash__dot--y"></span>
+            <span class="dash__dot dash__dot--g"></span>
+            <span class="dash__url">interlockalert.co.uk/portal</span>
+          </div>
+          <div class="dash__body">
+            <aside class="dash__side">
+              <div class="dash__brand">
+                <svg class="icon-18" aria-hidden="true"><use href="#i-logo"/></svg>
+                <span>Interlock Alert</span>
+              </div>
+              <div class="dash__nav-item dash__nav-item--active">Dashboard</div>
+              <div class="dash__nav-item">Vehicles</div>
+              <div class="dash__nav-item">Drivers</div>
+              <div class="dash__nav-item">Test logs</div>
+              <div class="dash__nav-item">Reports</div>
+              <div class="dash__nav-item">Settings</div>
+            </aside>
+            <div class="dash__main">
+              <div class="dash__title-row">
+                <div class="dash__h">Fleet overview</div>
+                <div class="dash__pill">Last 24 hours</div>
+              </div>
+              <div class="dash__stats">
+                <div class="dash-stat">
+                  <div class="dash-stat__label">Active vehicles</div>
+                  <div class="dash-stat__value">142</div>
+                  <div class="dash-stat__delta dash-stat__delta--up">+3 this week</div>
+                </div>
+                <div class="dash-stat">
+                  <div class="dash-stat__label">Tests today</div>
+                  <div class="dash-stat__value">518</div>
+                  <div class="dash-stat__delta dash-stat__delta--up">99.4% pass</div>
+                </div>
+                <div class="dash-stat dash-stat--accent">
+                  <div class="dash-stat__label">Compliance</div>
+                  <div class="dash-stat__value">99.4%</div>
+                  <div class="dash-stat__delta">30-day</div>
+                </div>
+              </div>
+              <div class="dash__logs">
+                <div class="dash__log-head">
+                  <span>Driver</span><span>Vehicle</span><span>Result</span><span>Location</span>
+                </div>
+                <div class="dash__log-row">
+                  <span class="dash__who"><span class="dash__av dash__av--a">MT</span> Marcus Tate</span>
+                  <span>FD71 KPA</span>
+                  <span class="dash__tag dash__tag--pass">Pass 0µg</span>
+                  <span class="dash__loc"><svg class="icon-12" aria-hidden="true"><use href="#i-map-pin"/></svg> Birmingham</span>
+                </div>
+                <div class="dash__log-row">
+                  <span class="dash__who"><span class="dash__av dash__av--b">JR</span> Jade Richardson</span>
+                  <span>YX19 LMO</span>
+                  <span class="dash__tag dash__tag--pass">Pass 0µg</span>
+                  <span class="dash__loc"><svg class="icon-12" aria-hidden="true"><use href="#i-map-pin"/></svg> Leeds</span>
+                </div>
+                <div class="dash__log-row">
+                  <span class="dash__who"><span class="dash__av dash__av--c">DW</span> Dan Walsh</span>
+                  <span>BN22 EGF</span>
+                  <span class="dash__tag dash__tag--fail">Fail 48µg</span>
+                  <span class="dash__loc"><svg class="icon-12" aria-hidden="true"><use href="#i-map-pin"/></svg> Glasgow</span>
+                </div>
+                <div class="dash__log-row">
+                  <span class="dash__who"><span class="dash__av dash__av--d">AK</span> Anya Kowalski</span>
+                  <span>LS70 VRP</span>
+                  <span class="dash__tag dash__tag--pass">Pass 0µg</span>
+                  <span class="dash__loc"><svg class="icon-12" aria-hidden="true"><use href="#i-map-pin"/></svg> Bristol</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPATIBILITY -->
+  <section class="section section--band section--tight" id="compatibility">
+    <div class="wrap text-center reveal">
+      <span class="section__eyebrow">Compatibility</span>
+      <h2 class="section__heading">Compatible with petrol, diesel, hybrid and EV commercial vehicles.</h2>
+      <p class="section__lede">Our engineers install on petrol, diesel, hybrid and battery-electric vehicles — right-hand drive, CAN-bus or legacy, all makes supported.</p>
+
+      <ul class="compat-chips chip-group chip-group--wrap" role="list">
+        <li class="chip chip--selected">
+          <svg class="icon-18" aria-hidden="true"><use href="#i-fuel"/></svg>
+          <span class="chip__label">Petrol</span>
+        </li>
+        <li class="chip chip--selected">
+          <svg class="icon-18" aria-hidden="true"><use href="#i-fuel"/></svg>
+          <span class="chip__label">Diesel</span>
+        </li>
+        <li class="chip chip--selected">
+          <svg class="icon-18" aria-hidden="true"><use href="#i-battery"/></svg>
+          <span class="chip__label">Battery-electric</span>
+        </li>
+        <li class="chip chip--selected">
+          <svg class="icon-18" aria-hidden="true"><use href="#i-leaf"/></svg>
+          <span class="chip__label">Hybrid &amp; plug-in</span>
+        </li>
+      </ul>
+
+      <p class="compat-note">
+        <svg class="icon-16" aria-hidden="true"><use href="#i-gb"/></svg>
+        UK-wide professional installation — engineers in every region, usually within 5 working days.
+      </p>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="section" id="trust">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">Trusted by UK operators</span>
+        <h2 class="section__heading">UK-built. Operator-tested. Trusted by fleets that can't afford to get it wrong.</h2>
+      </header>
+
+      <div class="trust__row">
+        <article class="testimonial card card--elevated reveal">
+          <div class="testimonial__top">
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">
+              <svg class="icon-16" aria-hidden="true"><use href="#i-star"/></svg>
+              <svg class="icon-16" aria-hidden="true"><use href="#i-star"/></svg>
+              <svg class="icon-16" aria-hidden="true"><use href="#i-star"/></svg>
+              <svg class="icon-16" aria-hidden="true"><use href="#i-star"/></svg>
+              <svg class="icon-16" aria-hidden="true"><use href="#i-star"/></svg>
+            </div>
+            <img class="testimonial__logo-img" src="/images/target-tyres.png" alt="Target Tyres (Halifax) Ltd" />
+            <span class="testimonial__logo-fallback" aria-hidden="true">TARGET TYRES</span>
+          </div>
+          <blockquote class="testimonial__quote">
+            "We fitted Interlock Alert across our service fleet and the camera-verified tests gave us the audit trail our insurer wanted on day one. The portal is the first one I've actually used daily without cursing at it."
+          </blockquote>
+          <div class="testimonial__by">
+            <div class="avatar avatar--lg avatar--initials" role="img" aria-label="Rhys Hainsworth">
+              <span class="avatar__text">RH</span>
+            </div>
+            <div class="testimonial__meta">
+              <div class="testimonial__name">Rhys Hainsworth</div>
+              <div class="testimonial__role">Target Tyres</div>
+            </div>
+          </div>
+        </article>
+
+        <div class="trust__pillars reveal reveal--delay-2">
+          <div class="pillar">
+            <div class="pillar__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-gb"/></svg></div>
+            <div class="pillar__title">UK-based support</div>
+            <div class="pillar__body">Real engineers, not a call-centre script. Monday to Saturday.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-wrench"/></svg></div>
+            <div class="pillar__title">Professional installation</div>
+            <div class="pillar__body">Certified auto-electricians — warranty-safe, dealer-grade.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-shield-check"/></svg></div>
+            <div class="pillar__title">Built for reliability</div>
+            <div class="pillar__body">Fuel-cell sensors calibrated to clinical-grade accuracy.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--band" id="faq">
+    <div class="wrap wrap--narrow">
+      <header class="section__header section__header--center reveal">
+        <span class="section__eyebrow">Questions answered</span>
+        <h2 class="section__heading">Common questions about interlock devices.</h2>
+      </header>
+
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span>How does an alcohol interlock work?</span>
+            <svg class="icon-20 faq-item__chev" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="faq-item__a">
+            <p>An alcohol interlock requires the driver to complete a breath test before the vehicle can start. If the test is passed, the engine starts as normal. If not, the vehicle remains immobilised until a valid test is provided.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span>What happens if the driver fails the test?</span>
+            <svg class="icon-20 faq-item__chev" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="faq-item__a">
+            <p>If the breath test is above the set limit, the vehicle will not start. The event is recorded, and depending on setup, alerts can be sent to relevant managers or administrators.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span>How quickly can the vehicle be started?</span>
+            <svg class="icon-20 faq-item__chev" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="faq-item__a">
+            <p>The process takes just a few seconds. Drivers complete a quick breath test, receive an immediate result, and can start the vehicle straight away if they pass.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span>How does the system confirm who is taking the test?</span>
+            <svg class="icon-20 faq-item__chev" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="faq-item__a">
+            <p>The system captures an image or video at the time of the breath test, allowing each test to be linked to the person behind the wheel for greater accountability.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span>What vehicles is the system compatible with?</span>
+            <svg class="icon-20 faq-item__chev" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="faq-item__a">
+            <p>The system is designed for a wide range of vehicles, including cars, vans, HGVs, buses, and modern hybrid and electric vehicles.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span>How is the system installed?</span>
+            <svg class="icon-20 faq-item__chev" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="faq-item__a">
+            <p>Installation is carried out by trained professionals and integrates directly with the vehicle's ignition system. The process is straightforward and designed to minimise vehicle downtime.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span>Can this be used across multiple vehicles or fleets?</span>
+            <svg class="icon-20 faq-item__chev" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="faq-item__a">
+            <p>Yes, the system is built for both individual vehicles and full fleets. It can be deployed across multiple vehicles and managed centrally through a connected platform.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span>What data is recorded and who can access it?</span>
+            <svg class="icon-20 faq-item__chev" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="faq-item__a">
+            <p>Each test event is recorded, including the result, time, and driver identification. This data is accessible through a secure dashboard and can be viewed by authorised users such as fleet managers or administrators.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA />
+</Layout>

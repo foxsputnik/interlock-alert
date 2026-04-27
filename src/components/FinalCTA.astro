@@ -1,0 +1,25 @@
+---
+interface Props {
+  heading?: string;
+  body?: string;
+}
+const {
+  heading = "Don't wait for the call you didn't want to take.",
+  body = "Tell us what you drive and where you are. We'll send a tailored quote and installation window, usually within one business day.",
+} = Astro.props;
+---
+<section class="final-cta" id="get-quote">
+  <div class="wrap text-center reveal">
+    <h2 class="final-cta__h">{heading}</h2>
+    <p class="final-cta__p">{body}</p>
+    <a href="/contact" class="button button--primary button--xl">
+      <span class="button__label">Get a Quote</span>
+      <svg class="icon-20" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+    </a>
+    <div class="final-cta__foot">
+      <span>UK-wide installation</span><span aria-hidden="true">·</span>
+      <span>No activation fee</span><span aria-hidden="true">·</span>
+      <span>Cancel anytime</span>
+    </div>
+  </div>
+</section>

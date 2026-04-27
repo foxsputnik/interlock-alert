@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xxd)",
+      "Bash(npm install *)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/jonat/AppData/Roaming/**)",
+      "Bash(cmd.exe //c \"where npm\")",
+      "PowerShell(Get-Command npm -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue)",
+      "PowerShell(node --version 2>$null)",
+      "PowerShell(npm --version 2>$null)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; node --version; npm --version)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" --version)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" install 2>&1 | Select-Object -Last 30)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 50)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 25)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 8)"
+    ]
+  }
+}
