@@ -50,9 +50,10 @@ import QuoteModal from '../components/QuoteModal.astro';
   <!-- HOW IT WORKS -->
   <section class="section section--band" id="how-it-works">
     <div class="wrap">
-      <header class="section__header reveal">
+      <header class="section__header section__header--center reveal">
         <span class="section__eyebrow">How it works</span>
         <h2 class="section__heading">Four seconds between getting in the vehicle and knowing it's safe to drive.</h2>
+        <p class="section__lede">Every Interlock Alert test is a closed loop: the driver provides a breath sample, the integrated camera verifies their identity at the moment of the test, and the result is logged to your portal before the engine starts. There is no manual paperwork, no random-spot-check inconsistency, and no disputed audit trail at the end of the shift.</p>
       </header>
 
       <ol class="steps" role="list">
@@ -87,7 +88,7 @@ import QuoteModal from '../components/QuoteModal.astro';
   <!-- KEY FEATURES -->
   <section class="section" id="features">
     <div class="wrap">
-      <header class="section__header reveal">
+      <header class="section__header section__header--center reveal">
         <span class="section__eyebrow">Connected by design</span>
         <h2 class="section__heading">A camera-verified, cloud-connected interlock — the only one in the UK that's both.</h2>
         <p class="section__lede section__lede--compact">Every Interlock Alert device pairs an identity-verifying driver camera with always-on 4G connectivity. Every test is provable, and every result lands in your portal within seconds.</p>
@@ -145,10 +146,58 @@ import QuoteModal from '../components/QuoteModal.astro';
     </div>
   </section>
 
+  <!-- DRIVER-ID CAMERA -->
+  <section class="section" id="driver-id-camera">
+    <div class="wrap camera__grid">
+      <div class="camera__copy reveal">
+        <span class="section__eyebrow">Driver-ID camera</span>
+        <h2 class="section__heading">Every test, tied to the person who took it.</h2>
+        <p class="section__lede">The single biggest evasion risk on a manual driver alcohol policy is the sober colleague stepping in to provide a sample. Interlock Alert closes that gap with an integrated front-facing camera that captures both a still image and a short video clip at the moment of every breath test — visibly, with the driver's knowledge — so every result is unambiguously attributable.</p>
+
+        <ul class="camera__bullets" role="list">
+          <li>
+            <svg class="icon-20" aria-hidden="true"><use href="#i-camera"/></svg>
+            <div>
+              <strong>Image and short video clip per test</strong>
+              <p>Captured automatically as the breath sample is provided. Stored against the test event in your portal.</p>
+            </div>
+          </li>
+          <li>
+            <svg class="icon-20" aria-hidden="true"><use href="#i-shield-check"/></svg>
+            <div>
+              <strong>Visible, not covert</strong>
+              <p>Drivers know the camera is there and what it captures. Designed for fairness and policy enforcement, not surveillance.</p>
+            </div>
+          </li>
+          <li>
+            <svg class="icon-20" aria-hidden="true"><use href="#i-lock"/></svg>
+            <div>
+              <strong>UK-hosted, role-based access</strong>
+              <p>Footage is visible only to the authorised users your organisation nominates — fleet manager, line manager, HR or compliance lead.</p>
+            </div>
+          </li>
+        </ul>
+
+        <a href="/driver-id-camera" class="button button--ghost">
+          <span class="button__label">More on the driver-ID camera</span>
+          <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </a>
+      </div>
+
+      <figure class="camera__visual reveal reveal--delay-2" aria-hidden="true">
+        <img src="/images/hero-driver.png" alt="Driver providing a breath sample on an Interlock Alert device, with the integrated camera capturing identity at the moment of the test." class="camera__visual-img" loading="lazy" decoding="async" />
+        <div class="camera__caption">
+          <svg class="icon-16" aria-hidden="true"><use href="#i-camera"/></svg>
+          <span>Captured 09:14 · Driver verified · Pass 0µg</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
   <!-- USE CASES -->
   <section class="section section--band" id="use-cases">
     <div class="wrap">
-      <header class="section__header reveal">
+      <header class="section__header section__header--center reveal">
         <span class="section__eyebrow">Who it's for</span>
         <h2 class="section__heading">Built for everyone who carries the cost when it goes wrong.</h2>
         <p class="section__lede section__lede--compact">A single drink-drive incident never lands on the driver alone. Operators lose the contract, tradespeople lose the insurance, families lose far more. Interlock Alert takes the decision off the road entirely — so it never reaches any of them.</p>

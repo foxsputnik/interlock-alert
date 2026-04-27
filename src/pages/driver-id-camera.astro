@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+---
+<Layout
+  title="Driver-ID camera — verifying who took the test | Interlock Alert"
+  description="The Interlock Alert driver-ID camera captures an image and short video clip at the moment of every breath test, so every result is unambiguously attributable. UK-hosted, role-based access, designed for fairness and policy enforcement."
+>
+  <!-- HERO -->
+  <section class="hero hero--inner">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="wrap hero__grid hero__grid--narrow">
+      <div class="hero__copy reveal">
+        <span class="eyebrow">Driver-ID camera</span>
+        <h1 class="display">
+          The test is only as good as <span class="display__fade">the proof of who took it.</span>
+        </h1>
+        <p class="hero__sub">
+          Every Interlock Alert device pairs the breath test with a front-facing camera that captures both a still image and a short video clip of the person providing the sample. Every result is attributable. Every record stands up.
+        </p>
+        <div class="hero__cta">
+          <button type="button" class="button button--primary button--lg" data-quote-open>
+            <span class="button__label">Book a Demo</span>
+            <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT EXISTS -->
+  <section class="section section--band">
+    <div class="wrap wrap--narrow">
+      <header class="section__header section__header--center reveal">
+        <span class="section__eyebrow">The problem it solves</span>
+        <h2 class="section__heading">A breath test only matters if you can prove who provided it.</h2>
+        <p class="section__lede">For most fleets running a manual driver alcohol policy, the single most common failure mode is straightforward: an impaired driver asks a sober colleague to provide the sample. With a manual breathalyser and no identity check, there is no record of who actually blew. With Interlock Alert, the camera removes the question entirely — every test event is bound to an image and short video clip of the person who provided it.</p>
+      </header>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">How the camera works</span>
+        <h2 class="section__heading">Captured automatically. Stored against the test event.</h2>
+      </header>
+
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-camera"/></svg></div>
+          <h3 class="feature__title">Front-facing capture</h3>
+          <p class="feature__body">A wide-angle lens mounted on the handheld unit captures the driver's face at the moment they exhale into the device — no manual prompt, no separate action.</p>
+        </article>
+        <article class="feature reveal reveal--delay-1">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-activity"/></svg></div>
+          <h3 class="feature__title">Image plus short video clip</h3>
+          <p class="feature__body">A still image confirms identity. A short surrounding video clip captures the moment of the sample — protecting against substituted samples and ambiguous tests.</p>
+        </article>
+        <article class="feature reveal reveal--delay-2">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-bell"/></svg></div>
+          <h3 class="feature__title">Synced live to the portal</h3>
+          <p class="feature__body">Capture is uploaded over 4G alongside the test result, BAC reading, GPS location and timestamp. Reviewable in your portal within seconds — not at the next service visit.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-shield-check"/></svg></div>
+          <h3 class="feature__title">Visible, not covert</h3>
+          <p class="feature__body">The camera is a clearly identifiable part of the device, the driver knows it is recording, and the policy is communicated upfront — by design, this is policy enforcement, not surveillance.</p>
+        </article>
+        <article class="feature reveal reveal--delay-1">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-lock"/></svg></div>
+          <h3 class="feature__title">Role-based access</h3>
+          <p class="feature__body">Only the people you nominate — fleet manager, line manager, HR contact, compliance lead — can review captured footage. Granular access is controlled through the portal.</p>
+        </article>
+        <article class="feature reveal reveal--delay-2">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-gb"/></svg></div>
+          <h3 class="feature__title">UK-hosted data</h3>
+          <p class="feature__body">All test images and video clips are stored on UK-based infrastructure under your account. Retention is configurable per organisation. We never sell, resell or share the data.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANSWERING THE PRIVACY QUESTION -->
+  <section class="section section--band">
+    <div class="wrap wrap--narrow">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">Privacy &amp; fairness</span>
+        <h2 class="section__heading">Designed to support a policy, not to monitor a workforce.</h2>
+        <p class="section__lede">The driver-ID camera was added for one reason: to make the test result reliable. It is engaged only at the moment of the breath test — not while the vehicle is in motion, not between tests, not while the engine is off. It is not a continuous in-cab camera. It captures a finite event tied to a clearly defined business purpose, and your organisation controls how the resulting data is stored, accessed and retained.</p>
+        <p class="section__lede">For HR and people teams, this matters. A camera-verified test produces the kind of evidence that supports formal disciplinary processes if needed — but more importantly, the visibility of the device tends to remove the need for them entirely. The behaviour adjusts before anyone has to investigate it.</p>
+      </header>
+    </div>
+  </section>
+
+  <!-- WHAT THE PORTAL SHOWS -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">In the portal</span>
+        <h2 class="section__heading">Every test, with the receipts.</h2>
+      </header>
+
+      <div class="feature-grid feature-grid--threes">
+        <article class="feature reveal">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-file-log"/></svg></div>
+          <h3 class="feature__title">Test result + driver image</h3>
+          <p class="feature__body">Pass or fail, BAC reading, time, vehicle, driver photo and video clip — all on a single record, exportable to PDF or CSV.</p>
+        </article>
+        <article class="feature reveal reveal--delay-1">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-map-pin"/></svg></div>
+          <h3 class="feature__title">GPS-stamped location</h3>
+          <p class="feature__body">Each event is geo-pinned to the street where the test was taken. Useful for shift verification and incident review.</p>
+        </article>
+        <article class="feature reveal reveal--delay-2">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-shield-check"/></svg></div>
+          <h3 class="feature__title">Audit-ready trail</h3>
+          <p class="feature__body">The combined record — image, video, BAC, GPS, timestamp, vehicle ID — is the evidence pack insurers, principal contractors and auditors expect to see.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA
+    useModal
+    heading="Want to see the camera in action?"
+    body="A 15-minute live demo or a 30-60 day pilot — pick the one that fits how your organisation makes decisions. We'll come back with a tailored proposal, usually within one business day."
+  />
+  <QuoteModal />
+</Layout>

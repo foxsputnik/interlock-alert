@@ -22,7 +22,7 @@ const isActive = (path: string) =>
     </a>
 
     <nav class="nav__links" aria-label="Primary">
-      <a href="/#how-it-works" class="nav__link">How it works</a>
+      <a href="/the-device" class={`nav__link ${isActive('/the-device') ? 'nav__link--active' : ''}`}>The device</a>
       <a href="/what-is-an-alcohol-interlock" class={`nav__link ${isActive('/what-is-an-alcohol-interlock') ? 'nav__link--active' : ''}`}>What is an interlock?</a>
       <a href="/#use-cases" class={`nav__link ${isActive('/use-cases') ? 'nav__link--active' : ''}`}>Use cases</a>
       <a href="/faq" class={`nav__link ${isActive('/faq') ? 'nav__link--active' : ''}`}>FAQ</a>

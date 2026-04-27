@@ -18,7 +18,18 @@
       "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 50)",
       "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 25)",
       "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 8)",
-      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 6)"
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 6)",
+      "Bash(extract-text \"C:/Users/jonat/Downloads/localised_b2b_marketing_plan.docx\")",
+      "Bash(pandoc --version)",
+      "Bash(cd /tmp)",
+      "Bash(python \"C:/Users/jonat/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/4a0ed3a6-bb8f-4eb6-97cb-6ba33c6b2530/d476f7fe-42da-4493-b124-834c3fc71441/skills/docx/scripts/office/unpack.py\" \"C:/Users/jonat/Downloads/localised_b2b_marketing_plan.docx\" /tmp/marketing-unpack)",
+      "PowerShell(Get-Command python -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command python3 -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command py -ErrorAction SilentlyContinue)",
+      "Bash(mkdir -p /tmp/mkt)",
+      "Read(//tmp/**)",
+      "Bash(unzip -o \"C:/Users/jonat/Downloads/localised_b2b_marketing_plan.docx\")",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 12)"
     ]
   }
 }

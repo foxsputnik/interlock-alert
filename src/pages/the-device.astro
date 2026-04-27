@@ -1,0 +1,242 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+---
+<Layout
+  title="The Interlock Alert device — what it is, how it's fitted, what it costs"
+  description="Plain-English explainer for the Interlock Alert pre-drive alcohol screening device — the only UK system pairing camera-verified driver identity with always-on 4G connectivity. UK-built, UK-supported, UK-installed."
+>
+  <!-- HERO -->
+  <section class="hero hero--inner">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="wrap hero__grid">
+      <div class="hero__copy reveal">
+        <span class="eyebrow">The Interlock Alert device</span>
+        <h1 class="display">
+          Pre-drive alcohol screening, <span class="display__fade">wired into the ignition.</span>
+        </h1>
+        <p class="hero__sub">
+          A handheld unit fitted at the ECU level, paired with a driver-ID camera and always-on 4G. Built for fleets, businesses and households who need driver alcohol policy to be enforced — not just written down.
+        </p>
+        <div class="hero__cta">
+          <button type="button" class="button button--primary button--lg" data-quote-open>
+            <span class="button__label">Get a Quote</span>
+            <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal reveal--delay-2">
+        <figure class="hero__media">
+          <img
+            src="/images/interlock-device.png"
+            alt="Interlock Alert handheld unit fitted in a vehicle cabin, with the driver-ID camera visible on the front face."
+            class="hero__media-img"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT THE DEVICE IS -->
+  <section class="section section--band">
+    <div class="wrap wrap--narrow">
+      <header class="section__header section__header--center reveal">
+        <span class="section__eyebrow">What it is</span>
+        <h2 class="section__heading">A handheld breathalyser, wired into the vehicle's ignition logic.</h2>
+        <p class="section__lede">The Interlock Alert device is small enough to live discreetly in the cabin, robust enough for daily commercial use, and engineered to integrate with the vehicle's ignition system at the ECU level. The driver provides a breath sample on the handheld unit — the device measures it on a clinical-grade fuel-cell sensor, captures an identity-verifying image and short video clip on the integrated camera, and either enables or immobilises the engine accordingly. Every event syncs to your portal over 4G in seconds.</p>
+      </header>
+    </div>
+  </section>
+
+  <!-- HOW IT'S USED -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">How drivers use it</span>
+        <h2 class="section__heading">Four seconds, one breath, one decision.</h2>
+      </header>
+
+      <ol class="steps" role="list">
+        <li class="step reveal">
+          <div class="step__num">01</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-wind"/></svg></div>
+          <h3 class="step__title">Sample provided</h3>
+          <p class="step__body">The driver picks up the handheld unit and provides a breath sample. The integrated camera captures an image and short video clip at the moment of exhalation.</p>
+        </li>
+        <li class="step reveal reveal--delay-1">
+          <div class="step__num">02</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-activity"/></svg></div>
+          <h3 class="step__title">Result returned</h3>
+          <p class="step__body">A fuel-cell sensor measures BAC against a vehicle-specific threshold you set in the portal. A clear pass or fail is shown on the handset within three seconds.</p>
+        </li>
+        <li class="step reveal reveal--delay-2">
+          <div class="step__num">03</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-key"/></svg></div>
+          <h3 class="step__title">Engine enabled or held</h3>
+          <p class="step__body">A pass releases the immobiliser at the ECU level. A fail keeps it engaged — there is no warning mode, no rolling start and no second attempt.</p>
+        </li>
+        <li class="step reveal reveal--delay-3">
+          <div class="step__num">04</div>
+          <div class="step__icon-wrap"><svg class="icon-28" aria-hidden="true"><use href="#i-file-log"/></svg></div>
+          <h3 class="step__title">Synced to your portal</h3>
+          <p class="step__body">Every test — pass or fail — is logged with BAC reading, GPS location, driver image and timestamp. Visible in the portal within seconds. Available to nominated alert contacts immediately.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="section section--band">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">What's inside</span>
+        <h2 class="section__heading">The hardware specs that matter.</h2>
+      </header>
+
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-activity"/></svg></div>
+          <h3 class="feature__title">Fuel-cell breath sensor</h3>
+          <p class="feature__body">Clinical-grade electrochemical sensor — the same technology used in police-grade breathalysers. Calibrated and re-calibrated on a defined service interval included in your monthly fee.</p>
+        </article>
+        <article class="feature reveal reveal--delay-1">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-camera"/></svg></div>
+          <h3 class="feature__title">Wide-angle driver-ID camera</h3>
+          <p class="feature__body">Front-facing camera capturing both a still image and a short video clip at the moment of every test. Visible to the driver, by design.</p>
+        </article>
+        <article class="feature reveal reveal--delay-2">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-bell"/></svg></div>
+          <h3 class="feature__title">4G modem with offline buffer</h3>
+          <p class="feature__body">Always-on UK 4G connectivity. Works anywhere there's a signal; queues test events locally during outages and syncs the moment connectivity returns.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-map-pin"/></svg></div>
+          <h3 class="feature__title">GPS module</h3>
+          <p class="feature__body">Each test is geo-stamped down to the street, providing the location-on-record element of the audit trail.</p>
+        </article>
+        <article class="feature reveal reveal--delay-1">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-lock"/></svg></div>
+          <h3 class="feature__title">ECU-level immobilisation</h3>
+          <p class="feature__body">Integrated with the vehicle's ignition logic at the ECU. A failed test prevents the engine starting at the lowest reliable level, no warning mode.</p>
+        </article>
+        <article class="feature reveal reveal--delay-2">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-wrench"/></svg></div>
+          <h3 class="feature__title">Tamper detection</h3>
+          <p class="feature__body">Any tamper attempt — wiring interference, removal, sensor obstruction — is logged and pushed to your nominated contacts in seconds.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPATIBILITY -->
+  <section class="section">
+    <div class="wrap text-center reveal">
+      <span class="section__eyebrow">Compatibility</span>
+      <h2 class="section__heading">Compatible with petrol, diesel, hybrid and EV commercial vehicles.</h2>
+      <p class="section__lede">Our engineers install on petrol, diesel, hybrid and battery-electric vehicles — including HGVs, LCVs, PSVs, modern keyless platforms and CAN-bus systems. All right-hand drive UK makes supported.</p>
+
+      <ul class="compat-chips chip-group chip-group--wrap" role="list">
+        <li class="chip chip--selected">
+          <svg class="icon-18" aria-hidden="true"><use href="#i-fuel"/></svg>
+          <span class="chip__label">Petrol</span>
+        </li>
+        <li class="chip chip--selected">
+          <svg class="icon-18" aria-hidden="true"><use href="#i-fuel"/></svg>
+          <span class="chip__label">Diesel</span>
+        </li>
+        <li class="chip chip--selected">
+          <svg class="icon-18" aria-hidden="true"><use href="#i-battery"/></svg>
+          <span class="chip__label">Battery-electric</span>
+        </li>
+        <li class="chip chip--selected">
+          <svg class="icon-18" aria-hidden="true"><use href="#i-leaf"/></svg>
+          <span class="chip__label">Hybrid &amp; plug-in</span>
+        </li>
+        <li class="chip chip--selected">
+          <svg class="icon-18" aria-hidden="true"><use href="#i-truck"/></svg>
+          <span class="chip__label">HGV</span>
+        </li>
+        <li class="chip chip--selected">
+          <svg class="icon-18" aria-hidden="true"><use href="#i-truck"/></svg>
+          <span class="chip__label">PSV / coach</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INSTALLATION -->
+  <section class="section section--band">
+    <div class="wrap">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">Installation</span>
+        <h2 class="section__heading">Fitted by certified UK auto-electricians, scheduled around your operation.</h2>
+      </header>
+
+      <div class="feature-grid feature-grid--threes">
+        <article class="feature reveal">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-wrench"/></svg></div>
+          <h3 class="feature__title">Dealer-grade fitting</h3>
+          <p class="feature__body">Each install is carried out at the ECU level by a certified UK auto-electrician. Warranty-safe, MOT-safe and fully reversible.</p>
+        </article>
+        <article class="feature reveal reveal--delay-1">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-gb"/></svg></div>
+          <h3 class="feature__title">UK-wide regional network</h3>
+          <p class="feature__body">Engineers in every region. Most installations take a single 90-minute appointment, scheduled within five working days of accepting your quote.</p>
+        </article>
+        <article class="feature reveal reveal--delay-2">
+          <div class="feature__icon"><svg class="icon-24" aria-hidden="true"><use href="#i-truck"/></svg></div>
+          <h3 class="feature__title">On-site for fleets</h3>
+          <p class="feature__body">For multi-vehicle deployments, our engineers can attend your depot and fit a wave of vehicles around the shift pattern — minimising downtime.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COST -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <header class="section__header reveal">
+        <span class="section__eyebrow">What does it cost?</span>
+        <h2 class="section__heading">One transparent monthly fee per device.</h2>
+        <p class="section__lede">Interlock Alert is priced per device, per month — calibration, connectivity, software updates and UK-based support all included. There are no activation fees, no per-test charges and no multi-year lock-in. Per-device pricing typically falls as the fleet count rises; we'll always show the tier on your quote.</p>
+        <p class="section__lede">For most fleet customers, a 30 to 60 day pilot is the easiest way to a real number. We agree the success criteria upfront — number of vehicles, drivers covered, manager feedback expected — and you make the rollout decision at the end with your own data in hand.</p>
+      </header>
+
+      <div class="hero__cta" style="margin-top: 8px;">
+        <button type="button" class="button button--primary button--lg" data-quote-open>
+          <span class="button__label">Discuss a pilot</span>
+          <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ TEASER -->
+  <section class="section section--band">
+    <div class="wrap wrap--narrow">
+      <header class="section__header section__header--center reveal">
+        <span class="section__eyebrow">Common questions</span>
+        <h2 class="section__heading">Everything else worth asking before you fit one.</h2>
+        <p class="section__lede">Privacy, identification, post-fail process, installation, MOT and warranty implications — all answered in one place, in plain English.</p>
+      </header>
+
+      <div class="hero__cta" style="margin-top: 8px; justify-content: center; display: flex;">
+        <a href="/faq" class="button button--ghost button--lg">
+          <span class="button__label">Read the full FAQ</span>
+          <svg class="icon-18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA
+    useModal
+    heading="See it working in your own vehicle."
+    body="A 15-minute live demo, or a 30-60 day pilot on a defined slice of your fleet. We'll come back with a tailored proposal, usually within one business day."
+  />
+  <QuoteModal />
+</Layout>
