@@ -1,0 +1,85 @@
+Image suggestions for /the-device
+=================================
+
+In priority order — what would actually move the needle, not just decoration.
+
+
+1. Hero — replacement for the current cabinet PNG
+---------------------------------------------------
+A clean studio product shot of the device against pure white, three-quarter
+angle, with the camera lens visible on the front face.
+
+OR — preferred for B2B —
+
+A real in-cab photo: the device fitted to a fleet vehicle dashboard
+(HGV / van / PSV) with hands holding the handset mid-test. Stronger for B2B
+because it shows scale, context and "we're already running this."
+
+
+2. "How drivers use it" (steps section) — a 4-frame photo strip
+----------------------------------------------------------------
+One photo per step:
+  (a) Hands picking up the handset
+  (b) Close-up of the driver exhaling into the device with the camera light on
+  (c) Green PASS on the screen with the ignition turning
+  (d) A phone or laptop showing the test event landing in the portal
+
+Either real photography or a simple isometric illustration set.
+
+
+3. "What's inside" — exploded-view diagram
+-------------------------------------------
+A semi-technical illustration showing the device split into its components —
+fuel-cell sensor, camera lens, 4G modem, GPS module, ECU connector — with thin
+callout lines.
+
+Single SVG; cheap to produce; massively raises product credibility for
+technical buyers (transport managers, HSE, fleet engineers).
+
+
+4. "Installation" — three real photos in a row
+-----------------------------------------------
+  (a) An engineer in branded workwear arriving at a depot
+  (b) The device being fitted under a vehicle dashboard with proper tools
+      (not amateur splicing)
+  (c) The finished cabin install — discreet, factory-grade
+
+These do the most work for objection-handling: they prove the install isn't
+a backyard job.
+
+
+5. "What does it cost?" — portal screenshot mockup
+---------------------------------------------------
+A clean dashboard screenshot showing a few real-looking pilot rows
+(driver name, vehicle, pass/fail, GPS pin, mini camera thumbnail).
+
+A higher-fidelity version of just the test-events table would slot into the
+cost section perfectly to support the pilot framing.
+
+
+6. "Compatibility" — small drivetrain illustrations
+----------------------------------------------------
+Replace the icon chips (Petrol, Diesel, Battery-electric, Hybrid, HGV, PSV)
+with small, clean two-tone illustrations of each vehicle type.
+
+Tiny lift, low cost, makes the section less generic.
+
+
+7. Optional — short looping product video
+------------------------------------------
+3-5 second silent loop of a driver testing on the device with the camera
+capture happening — embedded as a <video autoplay muted loop> either above
+the steps or replacing the hero figure.
+
+Massively raises the perceived quality of the page if you can get one shot
+well.
+
+
+Quickest wins to commission first
+---------------------------------
+Items 1, 4 and 5. They're the highest-credibility shots for the priority B2B
+buyer (fleet / ops / HSE) the marketing plan named.
+
+The exploded-view diagram (3) and step strip (2) come next.
+
+Chips (6) and video (7) are nice-to-haves.

@@ -31,7 +31,8 @@
       "Bash(unzip -o \"C:/Users/jonat/Downloads/localised_b2b_marketing_plan.docx\")",
       "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 12)",
       "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 4)",
-      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; Remove-Item -Recurse -Force dist -ErrorAction SilentlyContinue; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 5)"
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; Remove-Item -Recurse -Force dist -ErrorAction SilentlyContinue; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 5)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; cd \"C:\\\\Users\\\\jonat\\\\Dropbox\\\\Consulting\\\\New Site\\\\interlock-alert\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1 | Select-Object -Last 5)"
     ]
   }
 }
