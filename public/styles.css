@@ -180,7 +180,9 @@
 
   .section__header {
     max-width: 760px;
+    margin-inline: auto;
     margin-bottom: var(--space-2xl);
+    text-align: center;
   }
   .section__header--center { margin-inline: auto; text-align: center; }
 
@@ -203,6 +205,7 @@
   }
   .section__lede {
     margin-top: var(--space-base);
+    margin-inline: auto;
     font-size: 19px;
     line-height: 1.55;
     color: var(--color-on-surface-secondary);
