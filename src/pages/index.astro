@@ -261,82 +261,17 @@ import QuoteModal from '../components/QuoteModal.astro';
         </button>
       </div>
 
-      <div class="portal__visual reveal reveal--delay-2" aria-hidden="true">
-        <div class="dash">
-          <div class="dash__chrome">
-            <span class="dash__dot dash__dot--r"></span>
-            <span class="dash__dot dash__dot--y"></span>
-            <span class="dash__dot dash__dot--g"></span>
-            <span class="dash__url">interlockalert.co.uk/portal</span>
-          </div>
-          <div class="dash__body">
-            <aside class="dash__side">
-              <div class="dash__brand">
-                <svg class="icon-18" aria-hidden="true"><use href="#i-logo"/></svg>
-                <span>Interlock Alert</span>
-              </div>
-              <div class="dash__nav-item dash__nav-item--active">Dashboard</div>
-              <div class="dash__nav-item">Vehicles</div>
-              <div class="dash__nav-item">Drivers</div>
-              <div class="dash__nav-item">Test logs</div>
-              <div class="dash__nav-item">Reports</div>
-              <div class="dash__nav-item">Settings</div>
-            </aside>
-            <div class="dash__main">
-              <div class="dash__title-row">
-                <div class="dash__h">Fleet overview</div>
-                <div class="dash__pill">Last 24 hours</div>
-              </div>
-              <div class="dash__stats">
-                <div class="dash-stat">
-                  <div class="dash-stat__label">Active vehicles</div>
-                  <div class="dash-stat__value">142</div>
-                  <div class="dash-stat__delta dash-stat__delta--up">+3 this week</div>
-                </div>
-                <div class="dash-stat">
-                  <div class="dash-stat__label">Tests today</div>
-                  <div class="dash-stat__value">518</div>
-                  <div class="dash-stat__delta dash-stat__delta--up">99.4% pass</div>
-                </div>
-                <div class="dash-stat dash-stat--accent">
-                  <div class="dash-stat__label">Compliance</div>
-                  <div class="dash-stat__value">99.4%</div>
-                  <div class="dash-stat__delta">30-day</div>
-                </div>
-              </div>
-              <div class="dash__logs">
-                <div class="dash__log-head">
-                  <span>Driver</span><span>Vehicle</span><span>Result</span><span>Location</span>
-                </div>
-                <div class="dash__log-row">
-                  <span class="dash__who"><span class="dash__av dash__av--a">MT</span> Marcus Tate</span>
-                  <span>FD71 KPA</span>
-                  <span class="dash__tag dash__tag--pass">Pass 0µg</span>
-                  <span class="dash__loc"><svg class="icon-12" aria-hidden="true"><use href="#i-map-pin"/></svg> Birmingham</span>
-                </div>
-                <div class="dash__log-row">
-                  <span class="dash__who"><span class="dash__av dash__av--b">JR</span> Jade Richardson</span>
-                  <span>YX19 LMO</span>
-                  <span class="dash__tag dash__tag--pass">Pass 0µg</span>
-                  <span class="dash__loc"><svg class="icon-12" aria-hidden="true"><use href="#i-map-pin"/></svg> Leeds</span>
-                </div>
-                <div class="dash__log-row">
-                  <span class="dash__who"><span class="dash__av dash__av--c">DW</span> Dan Walsh</span>
-                  <span>BN22 EGF</span>
-                  <span class="dash__tag dash__tag--fail">Fail 48µg</span>
-                  <span class="dash__loc"><svg class="icon-12" aria-hidden="true"><use href="#i-map-pin"/></svg> Glasgow</span>
-                </div>
-                <div class="dash__log-row">
-                  <span class="dash__who"><span class="dash__av dash__av--d">AK</span> Anya Kowalski</span>
-                  <span>LS70 VRP</span>
-                  <span class="dash__tag dash__tag--pass">Pass 0µg</span>
-                  <span class="dash__loc"><svg class="icon-12" aria-hidden="true"><use href="#i-map-pin"/></svg> Bristol</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <figure class="portal__visual reveal reveal--delay-2">
+        <img
+          src="/images/main-dash-view.png"
+          alt="Interlock Alert portal — Breath Test Records page showing pass/fail counts, evidence-captured percentage, and a searchable list of test events with driver, vehicle, BAC reading, device ID, timestamp and GPS location."
+          class="portal__visual-img"
+          loading="lazy"
+          decoding="async"
+          width="2880"
+          height="1462"
+        />
+      </figure>
     </div>
   </section>
 
