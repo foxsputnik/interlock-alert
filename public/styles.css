@@ -1573,6 +1573,7 @@
   margin-inline: auto;
 }
 .hero__grid--narrow .hero__cta { justify-content: center; }
+.hero__cta--center { justify-content: center; }
 .hero__grid--narrow .hero__checklist { justify-content: center; }
 .hero__grid--narrow .hero__sub {
   margin-inline: auto;
@@ -1973,8 +1974,9 @@ a.usecase:focus-visible {
   --color-on-background: #0F1117;
   --color-surface: #FFFFFF;
   --color-on-surface: #0F1117;
-  --color-surface-secondary: #F8F8F8;   /* neutral section band */
+  --color-surface-secondary: #F2F4F7;   /* neutral section band — slight cool tint */
   --color-surface-tertiary: #EEEEEF;
+  --color-surface-tinted: #EEF3FB;      /* pale-blue tinted variant for visual variety */
   --color-surface-elevated: #FFFFFF;
   --color-on-surface-secondary: #5A6271;
 
@@ -2062,9 +2064,12 @@ a.usecase:focus-visible {
   background: var(--color-surface-secondary);
 }
 
-/* Section bands — neutral gray */
+/* Section bands — neutral gray, with pale-blue tinted variant for variety */
 .theme-v2 .section--band {
   background: var(--color-surface-secondary);
+}
+.theme-v2 .section--band-alt {
+  background: var(--color-surface-tinted);
 }
 
 /* Feature cards — clean white, hairline border, near-black icons */
