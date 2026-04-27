@@ -1574,6 +1574,11 @@
 }
 .hero__grid--narrow .hero__cta { justify-content: center; }
 .hero__grid--narrow .hero__checklist { justify-content: center; }
+.hero__grid--narrow .hero__sub {
+  margin-inline: auto;
+  max-width: 640px;
+}
+.hero__grid--narrow .display { margin-inline: auto; }
 
 /* Make usecase cards (now anchor links) feel like links */
 a.usecase {
